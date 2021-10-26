@@ -1,18 +1,18 @@
-# Inicio de proyecto Express
+# Proyecto VideoClub API
 
-## Proyecto en el que gestionamos una base de datos en la que se guardan recetas de cocina. Existen las tablas **ingredients**, **recipes** y **contains**. Tanto la tabla ingredients como la tabla recipes se relacionan con la tabla contains en una relación 1:N.
+## Proyecto realizado para Geeks Hubs Academy, en el que se solicita realizar la API de un videoclub con reparto de películas a domicilio.
 
 ## Pre-requisitos del proyecto:
 
-* Instalamos **Nodejs** en nuestro equipo, descargándolo de su página oficial
+* Instalar **Nodejs** en nuestro equipo, descargándolo de su página oficial
 https://nodejs.org/
 
-* Clonamos el proyecto en nuestro equipo con git bash:
+* Clonar el proyecto en nuestro equipo con git bash:
 ```
 $git clone 'url-del-repositorio'
 ```
 
-* Instalamos todas las dependecias con el siguiente comando:
+* Instalar todas las dependecias con el siguiente comando:
 ```
 npm install
 ```

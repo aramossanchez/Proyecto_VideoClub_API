@@ -21,13 +21,11 @@ app.use(morgan('combined', { stream: logger.stream }));//GENERO LOGS
 app.use(express.json()); //PUEDO OBTENER JSON DEL BODY
 app.use(cors(corsOptions));  //USO CORS
 
-//Rutas
-app.get('/', (req, res) => {res.send('Bienvenidos a Express');}); //PANTALLA DE BIENVENIDA EN PANTALLA DE INICIO
+//RUTAS
+app.get('/', (req, res) => {res.send('Bienvenidos a nuestro VideoClub');}); //PANTALLA DE BIENVENIDA EN PANTALLA DE INICIO
 app.use(router);
 
-//Connecting to the database
 db.then(()=>{
-    //Starting server
-        app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgBlue.white)); //ARRANCO SERVIDOR
+        app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgPink.white)); //ARRANCO SERVIDOR
     })
     .catch((err)=> console.log(err.message));   
