@@ -26,6 +26,6 @@ app.get('/', (req, res) => {res.send('Bienvenidos a nuestro VideoClub');}); //PA
 app.use(router);
 
 db.then(()=>{
-        app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgPink.white)); //ARRANCO SERVIDOR
+        app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgBlue.white)); //ARRANCO SERVIDOR
     })
     .catch((err)=> console.log(err.message));   
