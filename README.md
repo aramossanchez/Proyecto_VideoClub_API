@@ -134,9 +134,6 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 * **models**
     * **index.js**: Gestiona la conexión con la base de datos.
     * **pelicula.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **recipe.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla recipes de la base de datos. En este archivo añadimos también que su PK será FK de la tabla contains, y el nombre que llevará esa FK en esa tabla.
-    * **contain.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla contains de la base de datos. En este archivo añadimos también que tendrá 2 FK, y le indicamos de que tablas vienen esas columnas.
-    * **user.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla users de la base de datos. Indicamos también que ninguno de los campos puede ser null.
 
 * **seeders**:
     * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
