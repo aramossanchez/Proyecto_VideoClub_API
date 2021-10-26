@@ -119,35 +119,26 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 * **router.js**: En este archivo se gestiona las diferentes vistas que puede tener la aplicación. Se creará una ruta por cada tabla de la base de datos a la que queramos acceder (Ingrediente, Recipes, Contains y Users).
 
 * **views**
-    * **IngredientRouter.js**: En este archivo gestionamos la ruta /ingredients. Cada endpoint dentro de esa ruta llamará a una función.
-    * **RecipeRouter.js**: En este archivo gestionamos la ruta /recipes. Cada endpoint dentro de esa ruta llamará a una función.
-    * **ContainRouter.js**: En este archivo gestionamos la ruta /contains. Cada endpoint dentro de esa ruta llamará a una función.
-    * **UserRouter.js**: En este archivo gestionamos la ruta /access. Existe un endpoint para login y otro para registrarse.
+
+    * **UsuarioRouter.js**: En este archivo gestionamos la ruta /usuarios y los endpoints que apuntan a dicha ruta.
+    * **PeliculaRouter.js**: En este archivo gestionamos la ruta /peliculas y los endpoints que apuntan a dicha ruta.
+    * **PedidoRouter.js**: En este archivo gestionamos la ruta /pedidos y los endpoints que apuntan a dicha ruta.
 
 * **controllers**
-    * **IngredientController.js**: En este archivo creamos cada función que usarán los endpoints.
-    * **RecipeController.js**: En este archivo creamos cada función que usarán los endpoints.
-    * **ContainController.js**: En este archivo creamos cada función que usarán los endpoints.
-    * **AccessController.js**: En este archivo creamos las funciones para logarse y registrarse.
+    * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
+        * **getAll**: OBtenemos un listado de todas las películas.
+    
 
 * **migrations**
-    * **01-create-ingredient.js**: Al introducir el comando sequelize model:generate --name ingredient --attributes nombre:string se genera este archivo, y se crea la estructura de datos que tendrá la tabla ingredients (se genera con otro nombre, pero se lo cambio para controlar el orden de ejecución de estos archivos, ya que sequelize los lee y los ejecuta por orden alfabético).
-    * **02-create-recipe.js**: Al introducir el comando sequelize model:generate --name recipe --attributes nombre:string,descripcion:string se genera este archivo, y se crea la estructura de datos que tendrá la tabla recipes (se genera con otro nombre, pero se lo cambio para controlar el orden de ejecución de estos archivos, ya que sequelize los lee y los ejecuta por orden alfabético).
-    * **03-create-contain.js**: Al introducir el comando sequelize model:generate --name contain --attributes cantidad:string se genera este archivo, y se crea la estructura de datos que tendrá la tabla contain (se genera con otro nombre, pero se lo cambio para controlar el orden de ejecución de estos archivos, ya que sequelize los lee y los ejecuta por orden alfabético). En este archivo se añaden los campos que serán FK de las otras 2 tablas de la base de datos.
-    * **04-create-user.js**: Al introducir el comando sequelize model:generate --name user --attributes name:string,password:string,email:string se genera este archivo, y se crea la estructura de datos que tendrá la tabla user (se genera con otro nombre, pero se lo cambio para controlar el orden de ejecución de estos archivos, ya que sequelize los lee y los ejecuta por orden alfabético). En este archivo se indica que ningún campo pueda estar vacío. Además, el campo de email será único para cada registro.
+    * **01-create-pelicula.js**: Al introducir el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
 
 * **models**
     * **index.js**: Gestiona la conexión con la base de datos.
-    * **ingredient.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla ingredients de la base de datos. En este archivo añadimos también que su PK será FK de la tabla contains, y el nombre que llevará esa FK en esa tabla.
-    * **recipe.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla recipes de la base de datos. En este archivo añadimos también que su PK será FK de la tabla contains, y el nombre que llevará esa FK en esa tabla.
-    * **contain.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla contains de la base de datos. En este archivo añadimos también que tendrá 2 FK, y le indicamos de que tablas vienen esas columnas.
-    * **user.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla users de la base de datos. Indicamos también que ninguno de los campos puede ser null.
+    * **pelicula.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
 
 * **seeders**:
-    * **01-demo-ingredient**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-ingredient.
-    * **02-demo-recipe**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-ingredient.
-    * **03-demo-contain**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-ingredient.
-    * **04-demo-user**: Se genera plantilla para la creación de registros para la tabla user, tras introducir el comando sequelize seed:generate --name demo-user.
+
+    * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
 
 * **¡IMPORTANTE!** --> Creamos el archivo **.gitignore**, e incluimos lo siguiente (esencial para no subir la carpeta **node_modules** a github cuando hagamos push a nuestros archivos, entre otros):
 ```

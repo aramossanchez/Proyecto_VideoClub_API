@@ -2,16 +2,12 @@ const router = require('express').Router();
 
 const auth = require('./middlewares/auth');
 
-//Importamos Routes definidas en views
-const IngredientRouter = require('./views/IngredientRouter');
-const RecipeRouter = require('./views/RecipeRouter');
-const ContainRouter = require('./views/ContainRouter');
-const UserRouter = require('./views/UserRouter.js');
+// const UsuarioRouter = require('./views/UsuarioRouter');
+const PeliculaRouter = require('./views/PeliculaRouter');
+// const PedidoRouter = require('./views/PedidoRouter');
 
-//Rutas
-router.use('/access', UserRouter); //RUTA PARA LOGIN Y REGISTRO DE USUARIOS
-router.use('/ingredients', auth, IngredientRouter); //PASAMOS POR AUTENTICACION ANTES DE ACCEDER A CUALQUIERA DE ESTAS RUTAS
-router.use('/recipes', auth, RecipeRouter); //PASAMOS POR AUTENTICACION ANTES DE ACCEDER A CUALQUIERA DE ESTAS RUTAS
-router.use('/contains', auth, ContainRouter); //PASAMOS POR AUTENTICACION ANTES DE ACCEDER A CUALQUIERA DE ESTAS RUTAS
+// router.use('/usuarios', UsuarioRouter); //PASAMOS POR AUTENTICACION ANTES DE ACCEDER A CUALQUIERA DE ESTAS RUTAS
+router.use('/peliculas', PeliculaRouter); //PASAMOS POR AUTENTICACION ANTES DE ACCEDER A CUALQUIERA DE ESTAS RUTAS
+// router.use('/pedidos', PedidoRouter); //PASAMOS POR AUTENTICACION ANTES DE ACCEDER A CUALQUIERA DE ESTAS RUTAS
 
 module.exports = router;
