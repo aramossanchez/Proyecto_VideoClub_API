@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    actores: {
+    actor_principal: {
       type: DataTypes.STRING,
       allowNull: false
     },

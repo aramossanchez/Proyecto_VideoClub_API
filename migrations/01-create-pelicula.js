@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      actores: {
+      actor_principal: {
         type: Sequelize.STRING,
         allowNull: false,
       },

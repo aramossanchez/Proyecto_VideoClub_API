@@ -1,0 +1,2 @@
+{"level":"info","message":"::1 - - [27/Oct/2021:11:57:26 +0000] \"GET /peliculas HTTP/1.1\" 200 21405 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-10-27T11:57:26.506Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:11:57:26 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"http://localhost:3000/peliculas\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-10-27T11:57:26.558Z"}
