@@ -79,6 +79,7 @@ UsuarioController.getAll = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
+//BORRAMOS TODOS LOS USUARIOS
 UsuarioController.deleteAll = (req, res) => {
     usuario.destroy({
       where: {},
