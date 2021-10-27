@@ -124,24 +124,31 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     * **PedidoRouter.js**: En este archivo gestionamos la ruta /pedidos y los endpoints que apuntan a dicha ruta.
 
 * **controllers**
-    * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
+    * **PeliculaController.js**: En este archivo creamos las funciones de cada endpoint:
         * **getAll**: Obtenemos un listado de todas las películas.
         * **getById**: Obtenemos la película buscada por ID.
         * **getByCity**: Obtenemos un listado de las películas filtrado por la ciudad en donde se puede alquilar.
         * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
         * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
+    * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
+        * **signUp**: Gestionamos el registro en nuestra API.
+        * **signIn**: Gestionamos el login en nuestra API.
     
 
 * **migrations**
     * **01-create-pelicula.js**: Al introducir el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
+    * **01-create-usuario.js**: Al introducir el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
+
 
 * **models**
     * **index.js**: Gestiona la conexión con la base de datos.
     * **pelicula.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
+    * **usuario.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
 
 * **seeders**:
     * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
+    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos crearlo primero con el endpoint http://localhost:3000/usuarios/registro. Al crear un usuario, copiaremos los datos que nos da en el resultado (sobre todo la contraseña cifrada) y los pasaremos al seeder. De esta manera, al lanzar el comando sequelize db:seed:all se crearán usuarios con la contraseña ya cifrada, y podrán usar la función de loguearse en la API.
 
 * **¡IMPORTANTE!** --> Creamos el archivo **.gitignore**, e incluimos lo siguiente (esencial para no subir la carpeta **node_modules** a github cuando hagamos push a nuestros archivos, entre otros):
 ```
