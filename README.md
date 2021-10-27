@@ -43,10 +43,6 @@ Botón para usar la colección de postman, en donde están todos los endpoints p
 ```
 npm install express
 ```
-* **axios**: Instalamos axios en nuestro proyecto:
-```
-npm install axios
-```
 * **nodemon**: Instalamos nodemon en nuestro proyecto. También añadimos en nuestro **package.json** un script para poder ejecutarlo:
 ```
 npm install nodemon
@@ -124,14 +120,18 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
         * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
-        * **getAll**: Obtenemos un listado de todos los usuarios.
         * **signUp**: Gestionamos el registro en nuestra API.
         * **signIn**: Gestionamos el login en nuestra API.
+        * **getAll**: Obtenemos un listado de todos los usuarios.
+        * **deleteAll**: Eliminamos todos los registros de los usuarios.
+    * **PedidoController.js**: En este archivo creamos las funciones de cada endpoint:
+        * **getAll**: Obtenemos un listado de todos los pedidos realizados.
     
 
 * **migrations**
     * **01-create-pelicula.js**: Al introducir el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
     * **01-create-usuario.js**: Al introducir el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
+    * **03-create-pedido.js**: Al introducir el comando sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date se genera este archivo. Además, añadimos a este archivo los 2 campos que van a ser Foreign Key (peliculaId y usuarioId) Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
 
 
 * **models**

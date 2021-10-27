@@ -54,3 +54,5 @@
 {"level":"info","message":"::1 - - [27/Oct/2021:16:32:31 +0000] \"POST /usuarios/login HTTP/1.1\" 200 665 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T16:32:31.229Z"}
 {"level":"info","message":"::1 - - [27/Oct/2021:16:38:18 +0000] \"GET /usuarios HTTP/1.1\" 200 21859 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T16:38:18.709Z"}
 {"level":"info","message":"::1 - - [27/Oct/2021:16:39:22 +0000] \"POST /usuarios/login HTTP/1.1\" 200 672 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T16:39:22.805Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:17:52:10 +0000] \"GET /usuarios HTTP/1.1\" 200 21859 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T17:52:10.169Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:17:52:38 +0000] \"DELETE /usuarios HTTP/1.1\" 200 61 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T17:52:38.991Z"}

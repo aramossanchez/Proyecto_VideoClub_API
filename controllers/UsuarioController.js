@@ -5,23 +5,8 @@ const authConfig = require('../config/auth');
 
 const UsuarioController = {};
 
-//OBTENEMOS LISTADO DE TODAS LOS USUARIOS
-UsuarioController.getAll = (req, res) => {
-  
-    usuario.findAll()
-      .then(data => {
-        res.send(data);
-      })
-      .catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Ha surgido algún error al intentar acceder a los usuarios."
-        });
-      });
-  };
 
-//-------------------------------------------------------------------------------------
-
+//GESTIONAMOS LOGIN DE USUARIOS
 UsuarioController.signIn = (req, res) => {
 
     let correo = req.body.correo;
@@ -52,7 +37,8 @@ UsuarioController.signIn = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
-UsuarioController.signUp = (req, res) => { //REGISTRO
+//GESTIONAMOS REGISTRO DE USUARIOS
+UsuarioController.signUp = (req, res) => { 
 
     let password = bcrypt.hashSync(req.body.clave, Number.parseInt(authConfig.rounds)); //SE ENCRIPTA LA CONTRASEÑA
 
@@ -73,6 +59,41 @@ UsuarioController.signUp = (req, res) => { //REGISTRO
     });
 
 };
+
+//-------------------------------------------------------------------------------------
+
+//OBTENEMOS LISTADO DE TODAS LOS USUARIOS
+UsuarioController.getAll = (req, res) => {
+  
+    usuario.findAll()
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Ha surgido algún error al intentar acceder a los usuarios."
+        });
+      });
+  };
+
+//-------------------------------------------------------------------------------------
+
+UsuarioController.deleteAll = (req, res) => {
+    usuario.destroy({
+      where: {},
+      truncate: false
+    })
+      .then(nums => {
+        res.send({ message: `Se han borrado ${nums} usuarios de la base de datos` });
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Ha surgido algún error al intentar eliminar a los usuarios."
+        });
+      });
+  };
 
 module.exports = UsuarioController;
 

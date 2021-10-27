@@ -5,7 +5,9 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class pelicula extends Model {
     static associate(models) {
-      // define association here
+      this.hasMany(models.pedido, {
+        foreignKey: 'peliculaId'
+      });
     }
   };
   pelicula.init({
