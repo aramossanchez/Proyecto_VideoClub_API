@@ -125,7 +125,12 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 
 * **controllers**
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
-        * **getAll**: OBtenemos un listado de todas las películas.
+        * **getAll**: Obtenemos un listado de todas las películas.
+        * **getById**: Obtenemos la película buscada por ID.
+        * **getByCity**: Obtenemos un listado de las películas filtrado por la ciudad en donde se puede alquilar.
+        * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
+        * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
+        * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
     
 
 * **migrations**

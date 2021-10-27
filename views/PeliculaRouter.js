@@ -6,8 +6,11 @@ const PeliculaController = require('../controllers/PeliculaController');
 
 // End-points CRUD movies
 router.get('/', PeliculaController.getAll);
-router.get('/:ciudad', PeliculaController.getByCity);
-router.get('/:ciudad/:alquilada', PeliculaController.getByCityAndRented);
+router.get('/:id', PeliculaController.getById);
+router.get('/ciudad/:ciudad', PeliculaController.getByCity);
+router.get('/ciudad/:ciudad/alquilada/:alquilada', PeliculaController.getByCityAndRented);
+router.get('/genero/:genero', PeliculaController.getByGenre);
+router.get('/actor_principal/:actor_principal', PeliculaController.getByMainCharacter);
 // router.get('/:id', PeliculaController.getById);
 // router.post('/', PeliculaController.create);
 // router.put('/:id', PeliculaController.update);
