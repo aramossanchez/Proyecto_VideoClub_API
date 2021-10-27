@@ -4,805 +4,805 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('peliculas', [
       {
-        "titulo": "Samson and Delilah",
-        "genero": "Adventure|Drama",
-        "actor_principal": "Berkly Povah",
+        "titulo": "The Brain",
+        "genero": "Comedy|Crime",
+        "actor_principal": "Emlyn Prosek",
         "ciudad": "Valencia",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Dagon",
-        "genero": "Fantasy|Horror|Mystery|Thriller",
-        "actor_principal": "Tate Aishford",
+        "titulo": "How to Die in Oregon",
+        "genero": "Documentary|Drama",
+        "actor_principal": "Rickard Glazyer",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "No Man of Her Own ",
+        "genero": "Drama|Film-Noir",
+        "actor_principal": "Gwynne Occleshaw",
         "ciudad": "Albacete",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "All the Little Animals",
-        "genero": "Drama|Thriller",
-        "actor_principal": "Arlette Dykas",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Last Taboo, The",
-        "genero": "Documentary",
-        "actor_principal": "Ula Maryman",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Kiss the Girls",
-        "genero": "Crime|Drama|Mystery|Thriller",
-        "actor_principal": "Ulysses Van der Veldt",
+        "titulo": "Wolfen",
+        "genero": "Horror",
+        "actor_principal": "Renate Brinsden",
         "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Nothing About Robert (Rien sur Robert)",
+        "titulo": "Crazy Stone (Fengkuang de shitou)",
+        "genero": "Comedy|Crime",
+        "actor_principal": "Jolene Comoletti",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Trans",
+        "genero": "Drama",
+        "actor_principal": "Anissa Bresnen",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Streets of Blood",
+        "genero": "Action|Thriller",
+        "actor_principal": "Tedman Tevlin",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Deep Water",
+        "genero": "Documentary",
+        "actor_principal": "Marlin Savin",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Female Convict Scorpion: Jailhouse 41 (Joshuu sasori: Dai-41 zakkyo-bô)",
+        "genero": "Crime|Drama|Thriller",
+        "actor_principal": "Tani Kinkaid",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "A Connecticut Yankee in King Arthur's Court",
+        "genero": "Adventure|Children|Comedy|Fantasy",
+        "actor_principal": "Glen Chattington",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Family Honeymoon",
+        "genero": "Comedy|Romance",
+        "actor_principal": "Alfy Durak",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Desert Saints",
+        "genero": "Action|Thriller",
+        "actor_principal": "Brady Benettelli",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Toomorrow",
+        "genero": "Comedy|Musical|Sci-Fi",
+        "actor_principal": "Atlante D'eath",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Things Behind the Sun",
+        "genero": "Drama",
+        "actor_principal": "Gerhardine Allaker",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Boat That Rocked, The (a.k.a. Pirate Radio)",
         "genero": "Comedy|Drama",
-        "actor_principal": "Caryl Jouhan",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "On the Beach",
-        "genero": "Drama|Sci-Fi",
-        "actor_principal": "Gayla Dancey",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Governess, The",
-        "genero": "Drama|Romance",
-        "actor_principal": "Ginni Bendle",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Rebirth",
-        "genero": "Documentary",
-        "actor_principal": "Ricard de Vaen",
+        "actor_principal": "Sabrina Beeden",
         "ciudad": "Getafe",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Village, The",
-        "genero": "Drama|Mystery|Thriller",
-        "actor_principal": "Korella McDirmid",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Proof of Life",
-        "genero": "Drama",
-        "actor_principal": "Gustie Oleszkiewicz",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Parent Trap, The",
-        "genero": "Children|Comedy|Romance",
-        "actor_principal": "Lorens Batters",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "My Favorite Year",
-        "genero": "Comedy",
-        "actor_principal": "Sauveur Whitaker",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "12 Dates of Christmas",
-        "genero": "Children|Comedy|Fantasy|Romance",
-        "actor_principal": "Koren Nixon",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Burning Secret",
-        "genero": "Drama",
-        "actor_principal": "Ossie Harteley",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Bad Boys II",
-        "genero": "Action|Comedy|Crime|Thriller",
-        "actor_principal": "Em Gremain",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Merlin",
-        "genero": "Action|Adventure|Drama|Fantasy|Romance",
-        "actor_principal": "Orv Sleany",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Kickboxer 2: The Road Back",
-        "genero": "Action|Drama",
-        "actor_principal": "Isak Tedahl",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Conspiracy",
-        "genero": "Drama|War",
-        "actor_principal": "Katharine Youngman",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Shipping News, The",
-        "genero": "Drama",
-        "actor_principal": "Jami Masselin",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The Happy Road",
-        "genero": "Comedy",
-        "actor_principal": "Alexandre Chawner",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Dawn of the Dead",
-        "genero": "Action|Drama|Horror",
-        "actor_principal": "Woodman Marzellano",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Darwin Awards, The",
-        "genero": "Adventure|Comedy|Romance",
-        "actor_principal": "Edithe Speers",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "My Little Pony: Equestria Girls",
-        "genero": "Animation|Children|Fantasy",
-        "actor_principal": "Alexandros Dhillon",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Thousand Clowns, A",
+        "titulo": "Yo Yo (Yoyo)",
         "genero": "Comedy|Drama|Romance",
-        "actor_principal": "Desdemona Pendall",
+        "actor_principal": "Lorry MacLaughlin",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Street Fighter, The (Gekitotsu! Satsujin ken)",
+        "genero": "Action",
+        "actor_principal": "Edlin Wyllcock",
         "ciudad": "Valencia",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Sunnyside",
-        "genero": "Comedy",
-        "actor_principal": "Maurizia Orfeur",
+        "titulo": "Beneath Hill 60",
+        "genero": "Drama|War",
+        "actor_principal": "Ernaline Connal",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Jetsons: The Movie",
+        "genero": "Animation|Children|Comedy|Musical|Sci-Fi",
+        "actor_principal": "Raimondo Lickess",
         "ciudad": "Getafe",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Real Women Have Curves",
+        "titulo": "Valentine",
+        "genero": "Horror|Mystery",
+        "actor_principal": "Noak Waylett",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Drevo",
+        "genero": "Drama",
+        "actor_principal": "Shantee Glander",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Samaritan Zatoichi (Zatôichi kenka-daiko) (Zatôichi 19)",
+        "genero": "Action|Adventure|Drama",
+        "actor_principal": "Konstance Dillamore",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Punksters & Youngsters (Punk - Tauti joka ei tapa)",
+        "genero": "Documentary",
+        "actor_principal": "Orsa Davinet",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Phone (Pon)",
+        "genero": "Drama|Horror|Mystery|Sci-Fi|Thriller",
+        "actor_principal": "Val Garrique",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Mr. Nice Guy (Yat goh ho yan)",
+        "genero": "Action|Comedy",
+        "actor_principal": "Thorn Bothe",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Midnight Movies: From the Margin to the Mainstream",
+        "genero": "Documentary",
+        "actor_principal": "Lorelei Picopp",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Black Rainbow",
+        "genero": "Thriller",
+        "actor_principal": "Penn Skittles",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Family Weekend",
         "genero": "Comedy|Drama",
-        "actor_principal": "Levi Mattersey",
+        "actor_principal": "Carline Vedyaev",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Some Body",
+        "genero": "Drama",
+        "actor_principal": "Dorotea Flack",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Lovers of Hate",
+        "genero": "Comedy",
+        "actor_principal": "Willette Greep",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Little Nemo: Adventures in Slumberland",
+        "genero": "Adventure|Animation|Children|Drama|Fantasy",
+        "actor_principal": "Hamish Bolding",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Night of the Zombies (a.k.a. Hell of the Living Dead) (Virus)",
+        "genero": "Action|Horror|Thriller",
+        "actor_principal": "Bryanty Winnister",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Soloalbum",
+        "genero": "Comedy|Romance",
+        "actor_principal": "Aurore Keeler",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Ghost of Frankenstein, The",
+        "genero": "Horror",
+        "actor_principal": "Ephrayim Ivoshin",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "The Fuller Brush Man",
+        "genero": "Adventure|Comedy",
+        "actor_principal": "Bryna Mordey",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Five Minarets in New York (Act of Vengeance) (Terrorist, The)",
+        "genero": "Drama",
+        "actor_principal": "Marketa Phippen",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Bubble",
+        "genero": "Crime|Drama|Mystery",
+        "actor_principal": "Nikos Furmedge",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Candyman 3: Day of the Dead",
+        "genero": "Horror",
+        "actor_principal": "Roddy Bigglestone",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "L'instant et la patience ",
+        "genero": "Documentary",
+        "actor_principal": "Emelda Parkinson",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Angélique, marquise des anges",
+        "genero": "Adventure|Romance",
+        "actor_principal": "Shannon Vallentine",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Bangkok Dangerous",
+        "genero": "Action|Crime|Thriller",
+        "actor_principal": "Courtney Dyka",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "I've Loved You So Long (Il y a longtemps que je t'aime)",
+        "genero": "Drama|Mystery",
+        "actor_principal": "Archer Father",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Cat Soup (Nekojiru-so)",
+        "genero": "Adventure|Animation|Drama|Horror",
+        "actor_principal": "Humfrey Canning",
         "ciudad": "Getafe",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Kill the Irishman",
-        "genero": "Action|Crime",
-        "actor_principal": "Stillmann Fullstone",
-        "ciudad": "Valencia",
+        "titulo": "Where the Road Meets the Sun",
+        "genero": "Crime|Drama",
+        "actor_principal": "Dannye Corinton",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Andromeda Strain, The",
+        "genero": "Mystery|Sci-Fi",
+        "actor_principal": "Nerte Mayow",
+        "ciudad": "Getafe",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Vision (Vision - Aus dem Leben der Hildegard von Bingen)",
-        "genero": "Drama",
-        "actor_principal": "Loria Roderham",
+        "titulo": "American Crime, An",
+        "genero": "Crime",
+        "actor_principal": "Alicea Duplan",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Odds, The",
+        "genero": "Crime|Mystery",
+        "actor_principal": "Amalee Brockman",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Whistling in Dixie",
+        "genero": "Comedy|Crime|Mystery",
+        "actor_principal": "Marlow Turfs",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Fair Game",
+        "genero": "Drama|Thriller",
+        "actor_principal": "Sven Seakes",
         "ciudad": "Albacete",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Johns",
+        "titulo": "Maid in Sweden",
         "genero": "Drama",
-        "actor_principal": "Kirbee Bootherstone",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Forced Vengeance",
-        "genero": "Action|Adventure",
-        "actor_principal": "Tess Oscroft",
+        "actor_principal": "Constancia Drew",
         "ciudad": "Albacete",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Stranger in Town, A",
+        "titulo": "Common Thread, A (a.k.a. Sequins) (Brodeuses)",
         "genero": "Drama|Romance",
-        "actor_principal": "Tamarra Shucksmith",
+        "actor_principal": "Jennilee Bruntjen",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Far from the Madding Crowd",
+        "genero": "Drama|Romance",
+        "actor_principal": "Grayce Burchmore",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Love Object",
+        "genero": "Comedy|Drama|Horror|Romance|Thriller",
+        "actor_principal": "Talia Bratt",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Anatomy (Anatomie)",
+        "genero": "Horror",
+        "actor_principal": "Josee Guyan",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Green Ice",
+        "genero": "Adventure|Romance",
+        "actor_principal": "Zaccaria Rodbourne",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Leaves of Grass",
+        "genero": "Comedy|Crime|Drama|Thriller",
+        "actor_principal": "Sheryl Crumbie",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Human Scale, The",
+        "genero": "Documentary",
+        "actor_principal": "Pippy Bearward",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "French Fried Vacation 3 (Les bronzés 3: amis pour la vie)",
+        "genero": "Comedy",
+        "actor_principal": "Alley Meneyer",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Belly",
+        "genero": "Crime|Drama",
+        "actor_principal": "Murdock Jaine",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Living Room of the Nation, The (Kansakunnan olohuone)",
+        "genero": "Documentary",
+        "actor_principal": "Justen Stukings",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Hey Arnold! The Movie",
+        "genero": "Adventure|Animation|Children|Comedy",
+        "actor_principal": "Aloin Merkle",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Seeking a Friend for the End of the World",
+        "genero": "Comedy|Drama|Romance",
+        "actor_principal": "Felicio Chadwick",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Expecting a Miracle",
+        "genero": "Drama",
+        "actor_principal": "Kaleb Duffree",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Medicine for Melancholy",
+        "genero": "Drama|Romance",
+        "actor_principal": "Britta Reinmar",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Obama Deception: The Mask Comes Off, The",
+        "genero": "Documentary",
+        "actor_principal": "Harris Cokayne",
         "ciudad": "Getafe",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Mulholland Falls",
+        "genero": "Crime|Drama|Thriller",
+        "actor_principal": "Debby Sibbert",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Stepdaughter, The",
+        "genero": "Horror|Thriller",
+        "actor_principal": "Orion Guillerman",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Waterloo",
+        "genero": "Action|Drama|War",
+        "actor_principal": "Cosimo McSperrin",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "War Photographer",
+        "genero": "Documentary|War",
+        "actor_principal": "Almeta Crosher",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Mission: Impossible - Ghost Protocol",
+        "genero": "Action|Adventure|Thriller|IMAX",
+        "actor_principal": "Noland Andriessen",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Joyless Street, The (Die freudlose Gasse)",
+        "genero": "Drama",
+        "actor_principal": "Abdel Goodered",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Passion of Anna, The (Passion, En)",
+        "genero": "Drama",
+        "actor_principal": "Haskel Parlet",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Mr. Robinson Crusoe",
+        "genero": "Adventure|Comedy",
+        "actor_principal": "Garey Hayen",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Night Terrors",
+        "genero": "Horror",
+        "actor_principal": "Emilio Kinrade",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "To Sleep with Anger",
+        "genero": "Drama",
+        "actor_principal": "Matt Trodden",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Post Mortem",
+        "genero": "Drama",
+        "actor_principal": "Jim Vassie",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Making the Grade",
+        "genero": "Comedy",
+        "actor_principal": "Koren Josiah",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "G@me",
+        "genero": "Thriller",
+        "actor_principal": "Lanny Manhood",
+        "ciudad": "Albacete",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Story of Three Loves, The",
+        "genero": "Drama|Musical|Romance",
+        "actor_principal": "Koren Schrieves",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Better Living",
+        "genero": "Comedy",
+        "actor_principal": "Lotte Caldow",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Bio Zombie (Sun faa sau si)",
+        "genero": "Comedy|Horror",
+        "actor_principal": "Grover Barrington",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Haunt",
+        "genero": "Horror|Mystery",
+        "actor_principal": "Jo-anne Giorgietto",
+        "ciudad": "Albacete",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Lost World: Jurassic Park, The",
+        "genero": "Action|Adventure|Sci-Fi|Thriller",
+        "actor_principal": "Kaitlynn Dobrowski",
+        "ciudad": "Getafe",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "I Know What I Saw",
+        "genero": "Documentary",
+        "actor_principal": "Val Kliner",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "TMNT (Teenage Mutant Ninja Turtles)",
+        "genero": "Action|Adventure|Animation|Children|Comedy|Fantasy",
+        "actor_principal": "Jacintha Songist",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Mysterious Mr. Moto",
+        "genero": "Crime|Drama|Mystery",
+        "actor_principal": "Kit Helgass",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
         "titulo": "Three Comrades",
         "genero": "Drama",
-        "actor_principal": "Page Handrok",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The Cave of the Golden Rose",
-        "genero": "Adventure|Children|Fantasy",
-        "actor_principal": "Jayne Davoren",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Rush Hour 2",
-        "genero": "Action|Comedy",
-        "actor_principal": "Gardy O'Spellissey",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Untraceable",
-        "genero": "Crime|Thriller",
-        "actor_principal": "Waylon Ossenna",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Superbad",
-        "genero": "Comedy",
-        "actor_principal": "Clerkclaude Deegin",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Stag",
-        "genero": "Action|Thriller",
-        "actor_principal": "Porter Klimushev",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Year of the Comet",
-        "genero": "Action|Adventure|Comedy|Romance",
-        "actor_principal": "Sarita Botfield",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Date with Judy, A",
-        "genero": "Comedy|Musical|Romance",
-        "actor_principal": "Felita Knappitt",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Nicholas Nickleby",
-        "genero": "Drama|Romance",
-        "actor_principal": "Gregoire Shimmin",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Doctor Strange",
-        "genero": "Action|Animation|Children|Fantasy|Sci-Fi",
-        "actor_principal": "Mead Gebb",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Summer Holiday",
-        "genero": "Musical|Romance",
-        "actor_principal": "Leanor Fisbey",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Happy Time, The",
-        "genero": "Comedy",
-        "actor_principal": "Tobey Zorn",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Red and the White, The (Csillagosok, katonák)",
-        "genero": "Drama|War",
-        "actor_principal": "Latrina Dommerque",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Tout ce qui brille",
-        "genero": "Comedy|Drama",
-        "actor_principal": "Linda Bricknall",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "My Father's Glory (La gloire de mon père)",
-        "genero": "Adventure|Drama",
-        "actor_principal": "Amelia Bewshire",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Phil Spector",
-        "genero": "Drama",
-        "actor_principal": "Fidela Cutmare",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Shorts",
-        "genero": "Children",
-        "actor_principal": "Max Whetson",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Morgan Pålsson - världsreporter",
-        "genero": "Action|Comedy",
-        "actor_principal": "Aurthur Prentice",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Splinter",
-        "genero": "Action|Horror|Thriller",
-        "actor_principal": "Stevy Popplestone",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The Land Before Time XII: The Great Day of the Flyers",
-        "genero": "Animation|Children|Sci-Fi",
-        "actor_principal": "Peyter Becke",
+        "actor_principal": "Sondra Tuffin",
         "ciudad": "Valencia",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Emperor Waltz, The",
-        "genero": "Comedy|Musical|Romance",
-        "actor_principal": "Wolfy Belfit",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Day, The",
-        "genero": "Drama|Sci-Fi|Thriller",
-        "actor_principal": "Arlinda Agdahl",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "I Spy",
-        "genero": "Action|Adventure|Comedy|Crime",
-        "actor_principal": "Shaw Klimkiewich",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Age of Stupid, The",
-        "genero": "Documentary",
-        "actor_principal": "Terrel Haffenden",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Wattstax",
-        "genero": "Documentary|Musical",
-        "actor_principal": "Alaric Davids",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Iron Horse, The",
-        "genero": "Western",
-        "actor_principal": "Pren Penburton",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Blue State",
-        "genero": "Comedy",
-        "actor_principal": "Quentin Pasticznyk",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Numbskull Emptybrook in the Army (Uuno Turhapuro armeijan leivissä)",
-        "genero": "Comedy",
-        "actor_principal": "Rasia Varley",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The Woman in Black 2: Angel of Death",
-        "genero": "Drama|Horror|Thriller",
-        "actor_principal": "Avie Shewan",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Star of Midnight",
-        "genero": "Comedy|Mystery|Romance",
-        "actor_principal": "Maynard Morman",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Elia Kazan: A Director's Journey",
-        "genero": "Documentary",
-        "actor_principal": "Joana Yashnov",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Travellers and Magicians",
-        "genero": "Adventure|Drama",
-        "actor_principal": "Marillin Keysel",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Lost Horizon",
-        "genero": "Adventure|Drama|Fantasy|Musical|Romance",
-        "actor_principal": "Fields Gley",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Legend of Bagger Vance, The",
-        "genero": "Drama|Romance",
-        "actor_principal": "Shae Rapin",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Destinées, Les (Destinées sentimentales, Les)",
-        "genero": "Drama|Romance",
-        "actor_principal": "Yorker Wesley",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The D.I.",
-        "genero": "Drama",
-        "actor_principal": "Worthington Empringham",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Mad Masters, The (Les maîtres fous)",
-        "genero": "Documentary",
-        "actor_principal": "Griz Berrane",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Skinwalkers",
-        "genero": "Horror|Thriller",
-        "actor_principal": "Josephine Shafier",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Chorus, The (Hamsarayan)",
-        "genero": "Drama",
-        "actor_principal": "Donelle Munro",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Aladdin",
-        "genero": "Adventure|Animation|Children|Comedy|Musical",
-        "actor_principal": "Grange Burnsall",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Pigskin Parade",
-        "genero": "Musical",
-        "actor_principal": "Thorvald Hailston",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Railway Man, The",
-        "genero": "Drama",
-        "actor_principal": "Floria Tregaskis",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "China 9, Liberty 37 (Amore, piombo e furore)",
-        "genero": "Western",
-        "actor_principal": "Lewie Grigoletti",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The Search for Santa Paws",
-        "genero": "Adventure|Children",
-        "actor_principal": "Horst Comi",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "The Emperor's Candlesticks",
-        "genero": "Drama|Romance",
-        "actor_principal": "Miltie Levene",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Valentin (Valentín)",
-        "genero": "Drama",
-        "actor_principal": "Charissa Tolchar",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Magic in the Water",
-        "genero": "Adventure|Children|Fantasy",
-        "actor_principal": "Billy Kingdon",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Funny Games U.S.",
-        "genero": "Drama|Thriller",
-        "actor_principal": "Clareta Bullon",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Expired",
+        "titulo": "And So It Goes",
         "genero": "Comedy|Drama|Romance",
-        "actor_principal": "Maddy Porkiss",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Suspect, The (Yong-eui-ja)",
-        "genero": "Action|Thriller",
-        "actor_principal": "Chico Bolliver",
+        "actor_principal": "Ambrose Curnok",
         "ciudad": "Getafe",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Lord of the Rings: The Return of the King, The",
-        "genero": "Action|Adventure|Drama|Fantasy",
-        "actor_principal": "Liesa Deveral",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Chimpanzee",
-        "genero": "Documentary",
-        "actor_principal": "Fanya Powe",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Sweet Evil (L'enfance du mal)",
+        "titulo": "Invincible",
         "genero": "Drama",
-        "actor_principal": "Kelly Macer",
-        "ciudad": "Valencia",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Brazilian Western (Faroeste Caboclo)",
-        "genero": "Crime|Drama|Romance",
-        "actor_principal": "Marney Abdie",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "I Start Counting",
-        "genero": "Thriller",
-        "actor_principal": "Corinne Jimmison",
-        "ciudad": "Albacete",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Los Marziano",
-        "genero": "Comedy|Drama",
-        "actor_principal": "Tuesday Champkins",
+        "actor_principal": "Dall Brain",
         "ciudad": "Valencia",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Star, The",
-        "genero": "Drama",
-        "actor_principal": "Johnathon Imlock",
+        "titulo": "Agnes of God",
+        "genero": "Drama|Mystery",
+        "actor_principal": "Ardisj Liddall",
         "ciudad": "Valencia",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Charlotte's Web",
-        "genero": "Animation|Children",
-        "actor_principal": "Sheppard Petruskevich",
-        "ciudad": "Albacete",
+        "titulo": "Dirty Shame, A",
+        "genero": "Comedy",
+        "actor_principal": "Joachim Frantzen",
+        "ciudad": "Valencia",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Brotherhood of Death",
-        "genero": "Action|Drama|War",
-        "actor_principal": "Austina Echalier",
+        "titulo": "Rock-A-Doodle",
+        "genero": "Adventure|Animation|Children|Musical",
+        "actor_principal": "Analiese Bern",
+        "ciudad": "Valencia",
+        "alquilada": false,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Wieners",
+        "genero": "Comedy",
+        "actor_principal": "Brittni Gentery",
+        "ciudad": "Getafe",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Jesse Stone: Night Passage",
+        "genero": "Crime|Drama|Mystery",
+        "actor_principal": "Arlene MacConneely",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "There Will Be Blood",
+        "genero": "Drama|Western",
+        "actor_principal": "Berrie Bromet",
         "ciudad": "Albacete",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Everyone Else (Alle Anderen)",
+        "titulo": "Furies, The",
+        "genero": "Drama|Romance|Western",
+        "actor_principal": "Sanderson Radcliffe",
+        "ciudad": "Valencia",
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
+      }, {
+        "titulo": "Lawyer Man",
         "genero": "Drama|Romance",
-        "actor_principal": "Ingrim Gammade",
+        "actor_principal": "Elna Barbour",
         "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Superstar: The Karen Carpenter Story",
-        "genero": "Drama|Musical",
-        "actor_principal": "Morissa Rarity",
-        "ciudad": "Albacete",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "'Twas the Night Before Christmas",
-        "genero": "Animation|Children|Fantasy",
-        "actor_principal": "Gussy Whyberd",
-        "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Divorce",
-        "genero": "Drama",
-        "actor_principal": "Lucius Youel",
-        "ciudad": "Getafe",
         "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Little Ashes",
-        "genero": "Drama",
-        "actor_principal": "Paolo O'Cullinane",
+        "titulo": "Ong-Bak 2: The Beginning (Ong Bak 2)",
+        "genero": "Action",
+        "actor_principal": "Nicolis Spriddle",
         "ciudad": "Valencia",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Tekkonkinkreet (Tekkon kinkurîto)",
-        "genero": "Action|Adventure|Animation|Crime|Fantasy",
-        "actor_principal": "Flori Werndley",
+        "titulo": "Sixteen Candles",
+        "genero": "Comedy|Romance",
+        "actor_principal": "Rosabelle Possel",
         "ciudad": "Albacete",
         "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }, {
-        "titulo": "Borrowers, The",
-        "genero": "Adventure|Children|Comedy|Fantasy",
-        "actor_principal": "Reine McElvine",
-        "ciudad": "Getafe",
-        "alquilada": true,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "Cowboy Bebop",
-        "genero": "Action|Adventure|Animation|Crime|Sci-Fi",
-        "actor_principal": "Greg Casburn",
-        "ciudad": "Getafe",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
-      }, {
-        "titulo": "King - Jari Litmanen, The (Kuningas Litmanen)",
-        "genero": "Documentary",
-        "actor_principal": "Jerrylee Mardy",
+        "titulo": "Greatest Game Ever Played, The",
+        "genero": "Drama",
+        "actor_principal": "Corney Leggis",
         "ciudad": "Valencia",
-        "alquilada": false,
-        "createdAt": "27.10.2021",
-        "updatedAt": "27.10.2021"
+        "alquilada": true,
+        "createdAt": "2021/10/27",
+        "updatedAt": "2021/10/27"
       }
     ], {});
   },

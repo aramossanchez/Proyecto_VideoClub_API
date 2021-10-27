@@ -3,7 +3,7 @@
     "username": "remoto",
     "password": "Consola06",
     "database": "Videoclub",
-    "host": "172.16.11.32",
+    "host": "192.168.1.132",
     "dialect": "mysql"
   },
   "test": {

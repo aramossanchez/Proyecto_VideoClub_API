@@ -17,10 +17,47 @@ PeliculaController.getAll = (req, res) => {
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Ha surgido algún error al intentar acceder a los ingredientes."
+            err.message || "Ha surgido algún error al intentar acceder a las películas."
         });
       });
   };
+
+//-------------------------------------------------------------------------------------
+
+PeliculaController.getByCity = (req, res) => {
+
+  let ciudad = req.params.ciudad;
+  
+  peliculas.findAll( {where: {ciudad: ciudad}})
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Ha surgido algún error al intentar acceder a las películas."
+      });
+    });
+};
+
+//-------------------------------------------------------------------------------------
+
+PeliculaController.getByCityAndRented = (req, res) => {
+
+  let ciudad = req.params.ciudad;
+  let rented = req.params.alquilada
+  
+  peliculas.findAll( {where: {ciudad: ciudad, alquilada: rented}})
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Ha surgido algún error al intentar acceder a las películas."
+      });
+    });
+};
 
 //-------------------------------------------------------------------------------------
 

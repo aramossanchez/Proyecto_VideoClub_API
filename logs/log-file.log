@@ -1,2 +1,18 @@
 {"level":"info","message":"::1 - - [27/Oct/2021:11:57:26 +0000] \"GET /peliculas HTTP/1.1\" 200 21405 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-10-27T11:57:26.506Z"}
 {"level":"info","message":"::1 - - [27/Oct/2021:11:57:26 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"http://localhost:3000/peliculas\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-10-27T11:57:26.558Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:14:22:12 +0000] \"GET /peliculas HTTP/1.1\" 200 21986 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T14:22:12.709Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:14:30:11 +0000] \"GET /peliculas HTTP/1.1\" 200 21986 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T14:30:11.720Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:14:50:59 +0000] \"GET /peliculas/Valencia HTTP/1.1\" 200 7683 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T14:50:59.583Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:14:53:25 +0000] \"GET /peliculas/Getafe HTTP/1.1\" 200 6707 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T14:53:25.849Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:14:57:42 +0000] \"GET /peliculas/Getafe/true HTTP/1.1\" 404 160 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T14:57:42.481Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:14:59:22 +0000] \"GET /peliculas/Getafe/true HTTP/1.1\" 500 67 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T14:59:22.017Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:00:01 +0000] \"GET /peliculas/Getafe/true HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:00:01.225Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:00:17 +0000] \"GET /peliculas/Getafe/false HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:00:17.267Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:00:25 +0000] \"GET /peliculas/Getafe/true HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:00:25.798Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:01:12 +0000] \"GET /peliculas/Getafe/true HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:01:12.968Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:02:14 +0000] \"GET /peliculas/Getafe/ HTTP/1.1\" 200 6707 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:02:14.726Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:02:24 +0000] \"GET /peliculas/Getafe/true HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:02:24.052Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:02:31 +0000] \"GET /peliculas/Getafe/1 HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:02:31.059Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:02:41 +0000] \"GET /peliculas/Getafe/0 HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:02:41.834Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:02:45 +0000] \"GET /peliculas/Getafe/1 HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:02:45.686Z"}
+{"level":"info","message":"::1 - - [27/Oct/2021:15:03:49 +0000] \"GET /peliculas/Getafe/0 HTTP/1.1\" 200 3354 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-27T15:03:49.568Z"}
