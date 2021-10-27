@@ -5,6 +5,23 @@ const authConfig = require('../config/auth');
 
 const UsuarioController = {};
 
+//OBTENEMOS LISTADO DE TODAS LOS USUARIOS
+UsuarioController.getAll = (req, res) => {
+  
+    usuario.findAll()
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Ha surgido algún error al intentar acceder a los usuarios."
+        });
+      });
+  };
+
+//-------------------------------------------------------------------------------------
+
 UsuarioController.signIn = (req, res) => {
 
     let correo = req.body.correo;

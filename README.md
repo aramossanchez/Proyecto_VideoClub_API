@@ -37,14 +37,6 @@ sequelize db:seed:all
 
 Botón para usar la colección de postman, en donde están todos los endpoints para poder manipular la base de datos: [![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f?action=collection%2Ffork&collection-url=entityId%3D11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f%26entityType%3Dcollection%26workspaceId%3D8cbf41ec-fd52-44cd-82e7-1a6bcbebc7d5)
 
-<br>
-
-¡IMPORTANTE! En esta API existe un sistema de control de acceso por token. Cuando se llamen a los endpoints de Ingredients, Recipes y Contains es necesario un token de acceso. Para obtener el token hay que acceder al endpoint localhost:3000/access/signin e introducir por el body las credenciales de acceso de ese usuario. Con el token que obtenemos de respuesta podremos acceder al resto de endpoints de nuestra API. Para introducir ese token en Postman deberemos de acceder a la pestaña Authorization, y en Type seleccionar Bearer Token.
-
-<br>
-
-Es necesario crear un usuario con el endpoint localhost:3000/access/signup, para que se encripte la contraseña.
-
 ## Tecnologías utilizadas en el proyecto:
 
 * **express**: Instalamos express en nuestro proyecto:
@@ -132,13 +124,14 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
         * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
+        * **getAll**: Obtenemos un listado de todos los usuarios.
         * **signUp**: Gestionamos el registro en nuestra API.
         * **signIn**: Gestionamos el login en nuestra API.
     
 
 * **migrations**
     * **01-create-pelicula.js**: Al introducir el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
-    * **01-create-usuario.js**: Al introducir el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
+    * **01-create-usuario.js**: Al introducir el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
 
 
 * **models**
@@ -148,7 +141,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 
 * **seeders**:
     * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
-    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos crearlo primero con el endpoint http://localhost:3000/usuarios/registro. Al crear un usuario, copiaremos los datos que nos da en el resultado (sobre todo la contraseña cifrada) y los pasaremos al seeder. De esta manera, al lanzar el comando sequelize db:seed:all se crearán usuarios con la contraseña ya cifrada, y podrán usar la función de loguearse en la API.
+    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro.
 
 * **¡IMPORTANTE!** --> Creamos el archivo **.gitignore**, e incluimos lo siguiente (esencial para no subir la carpeta **node_modules** a github cuando hagamos push a nuestros archivos, entre otros):
 ```

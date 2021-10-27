@@ -14,7 +14,8 @@ module.exports = {
       },
       correo: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       clave: {
         type: Sequelize.STRING,
