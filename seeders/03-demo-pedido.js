@@ -3,183 +3,32 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('pedidos', [
-      {
-        "peliculaId": 44,
-        "usuarioId": 31,
-        "fecha_alquiler": "2021-10-12",
-        "fecha_devolucion": "2021-10-26",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 17,
-        "usuarioId": 92,
-        "fecha_alquiler": "2021-10-09",
-        "fecha_devolucion": "2021-10-22",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 57,
-        "usuarioId": 48,
-        "fecha_alquiler": "2021-10-15",
-        "fecha_devolucion": "2021-10-27",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 61,
-        "usuarioId": 64,
-        "fecha_alquiler": "2021-10-14",
-        "fecha_devolucion": "2021-10-23",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 86,
-        "usuarioId": 43,
-        "fecha_alquiler": "2021-10-08",
-        "fecha_devolucion": "2021-10-27",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 78,
-        "usuarioId": 33,
-        "fecha_alquiler": "2021-10-14",
-        "fecha_devolucion": "2021-10-23",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 73,
-        "usuarioId": 33,
-        "fecha_alquiler": "2021-10-09",
-        "fecha_devolucion": "2021-10-23",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 2,
-        "usuarioId": 24,
-        "fecha_alquiler": "2021-10-17",
-        "fecha_devolucion": "2021-10-20",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 67,
-        "usuarioId": 9,
-        "fecha_alquiler": "2021-10-15",
-        "fecha_devolucion": "2021-10-26",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 46,
-        "usuarioId": 62,
-        "fecha_alquiler": "2021-10-14",
-        "fecha_devolucion": "2021-10-21",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 25,
-        "usuarioId": 23,
-        "fecha_alquiler": "2021-10-15",
-        "fecha_devolucion": "2021-10-21",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 39,
-        "usuarioId": 67,
-        "fecha_alquiler": "2021-10-14",
-        "fecha_devolucion": "2021-10-21",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 36,
-        "usuarioId": 64,
-        "fecha_alquiler": "2021-10-09",
-        "fecha_devolucion": "2021-10-25",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 62,
-        "usuarioId": 65,
-        "fecha_alquiler": "2021-10-12",
-        "fecha_devolucion": "2021-10-27",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 52,
-        "usuarioId": 95,
-        "fecha_alquiler": "2021-10-08",
-        "fecha_devolucion": "2021-10-24",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 86,
-        "usuarioId": 29,
-        "fecha_alquiler": "2021-10-12",
-        "fecha_devolucion": "2021-10-27",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 48,
-        "usuarioId": 9,
-        "fecha_alquiler": "2021-10-08",
-        "fecha_devolucion": "2021-10-26",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 96,
-        "usuarioId": 57,
-        "fecha_alquiler": "2021-10-15",
-        "fecha_devolucion": "2021-10-22",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 32,
-        "usuarioId": 26,
-        "fecha_alquiler": "2021-10-17",
-        "fecha_devolucion": "2021-10-27",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 72,
-        "usuarioId": 97,
-        "fecha_alquiler": "2021-10-12",
-        "fecha_devolucion": "2021-10-22",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 63,
-        "usuarioId": 66,
-        "fecha_alquiler": "2021-10-15",
-        "fecha_devolucion": "2021-10-25",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 38,
-        "usuarioId": 75,
-        "fecha_alquiler": "2021-10-17",
-        "fecha_devolucion": "2021-10-23",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 56,
-        "usuarioId": 25,
-        "fecha_alquiler": "2021-10-14",
-        "fecha_devolucion": "2021-10-26",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 67,
-        "usuarioId": 90,
-        "fecha_alquiler": "2021-10-17",
-        "fecha_devolucion": "2021-10-21",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }, {
-        "peliculaId": 37,
-        "usuarioId": 76,
-        "fecha_alquiler": "2021-10-14",
-        "fecha_devolucion": "2021-10-24",
-        "createdAt": "2021-10-28",
-        "updatedAt": "2021-10-28"
-      }
-    ], {});
+    {"peliculaId":261,"usuarioId":6,"fecha_alquiler":"2021-10-13","fecha_devolucion":"2021-10-27","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":202,"usuarioId":40,"fecha_alquiler":"2021-10-15","fecha_devolucion":"2021-10-24","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":197,"usuarioId":43,"fecha_alquiler":"2021-10-10","fecha_devolucion":"2021-10-27","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":200,"usuarioId":44,"fecha_alquiler":"2021-10-13","fecha_devolucion":"2021-10-21","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":109,"usuarioId":25,"fecha_alquiler":"2021-10-13","fecha_devolucion":"2021-10-26","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":44,"usuarioId":33,"fecha_alquiler":"2021-10-10","fecha_devolucion":"2021-10-27","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":143,"usuarioId":47,"fecha_alquiler":"2021-10-13","fecha_devolucion":"2021-10-21","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":124,"usuarioId":44,"fecha_alquiler":"2021-10-14","fecha_devolucion":"2021-10-20","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":186,"usuarioId":17,"fecha_alquiler":"2021-10-13","fecha_devolucion":"2021-10-23","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":95,"usuarioId":7,"fecha_alquiler":"2021-10-10","fecha_devolucion":"2021-10-26","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":52,"usuarioId":16,"fecha_alquiler":"2021-10-10","fecha_devolucion":"2021-10-25","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":6,"usuarioId":41,"fecha_alquiler":"2021-10-14","fecha_devolucion":"2021-10-25","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":282,"usuarioId":40,"fecha_alquiler":"2021-10-15","fecha_devolucion":"2021-10-24","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":39,"usuarioId":20,"fecha_alquiler":"2021-10-12","fecha_devolucion":"2021-10-23","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":96,"usuarioId":15,"fecha_alquiler":"2021-10-12","fecha_devolucion":"2021-10-20","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":224,"usuarioId":22,"fecha_alquiler":"2021-10-16","fecha_devolucion":"2021-10-21","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":286,"usuarioId":17,"fecha_alquiler":"2021-10-17","fecha_devolucion":"2021-10-25","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":222,"usuarioId":5,"fecha_alquiler":"2021-10-17","fecha_devolucion":"2021-10-21","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":131,"usuarioId":7,"fecha_alquiler":"2021-10-10","fecha_devolucion":"2021-10-24","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":12,"usuarioId":41,"fecha_alquiler":"2021-10-08","fecha_devolucion":"2021-10-20","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":80,"usuarioId":11,"fecha_alquiler":"2021-10-11","fecha_devolucion":"2021-10-24","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":238,"usuarioId":20,"fecha_alquiler":"2021-10-17","fecha_devolucion":"2021-10-23","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":216,"usuarioId":8,"fecha_alquiler":"2021-10-15","fecha_devolucion":"2021-10-27","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":160,"usuarioId":16,"fecha_alquiler":"2021-10-14","fecha_devolucion":"2021-10-23","createdAt":"2021-10-28","updatedAt":"2021-10-28"},
+    {"peliculaId":132,"usuarioId":13,"fecha_alquiler":"2021-10-17","fecha_devolucion":"2021-10-25","createdAt":"2021-10-28","updatedAt":"2021-10-28"}
+  ], {});
   },
 
   down: async (queryInterface, Sequelize) => {
