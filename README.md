@@ -115,6 +115,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     * **PeliculaController.js**: En este archivo creamos las funciones de cada endpoint:
         * **getAll**: Obtenemos un listado de todas las películas.
         * **getById**: Obtenemos la película buscada por ID.
+        * **getByTitle**: Obtenemos un listado de las películas filtrado por el titulo de la película.
         * **getByCity**: Obtenemos un listado de las películas filtrado por la ciudad en donde se puede alquilar.
         * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
@@ -128,6 +129,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **deleteAll**: Eliminamos todos los registros de los usuarios.
     * **PedidoController.js**: En este archivo creamos las funciones de cada endpoint:
         * **getAll**: Obtenemos un listado de todos los pedidos realizados.
+
     
 
 * **migrations**
@@ -144,6 +146,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 * **seeders**:
     * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
     * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro.
+    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pedido. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro.
 
 * **¡IMPORTANTE!** --> Creamos el archivo **.gitignore**, e incluimos lo siguiente (esencial para no subir la carpeta **node_modules** a github cuando hagamos push a nuestros archivos, entre otros):
 ```
