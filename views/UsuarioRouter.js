@@ -9,6 +9,7 @@ router.post('/registro', UsuarioController.signUp);
 router.get('/', UsuarioController.getAll);
 router.get('/:id', UsuarioController.getById);
 router.delete('/', UsuarioController.deleteAll);
+router.delete('/:id', UsuarioController.delete);
 
 
 module.exports = router;

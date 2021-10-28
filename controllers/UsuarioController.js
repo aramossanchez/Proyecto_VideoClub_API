@@ -79,7 +79,7 @@ UsuarioController.getAll = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
-//OBTENEMOS LISTADO DE TODAS LOS USUARIOS
+//OBTENEMOS UN UNICO USUARIO, BUSCANDO POR ID
 UsuarioController.getById = (req, res) => {
     const id = req.params.id;
 
@@ -96,6 +96,34 @@ UsuarioController.getById = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message: "Ha surgido algún error al intentar acceder al usuario con el id " + id
+            });
+        });
+};
+
+//-------------------------------------------------------------------------------------
+
+//BORRAMOS A USUARIO, BUSCANDO POR ID
+UsuarioController.delete = (req, res) => {
+
+    const id = req.params.id;
+
+    usuario.destroy({
+        where: { id: id }
+    })
+        .then(num => {
+            if (num == 1) {
+                res.send({
+                    message: `El usuario con id ${id} ha sido eliminado correctamente.`
+                });
+            } else {
+                res.send({
+                    message: `No se ha podido eliminar el usuario con id ${id}.`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Ha surgido algún error al intentar borrar el usuario con el id " + id
             });
         });
 };
