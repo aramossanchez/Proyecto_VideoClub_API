@@ -79,6 +79,29 @@ UsuarioController.getAll = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
+//OBTENEMOS LISTADO DE TODAS LOS USUARIOS
+UsuarioController.getById = (req, res) => {
+    const id = req.params.id;
+
+    usuario.findByPk(id)
+        .then(data => {
+            if (data) {
+                res.send(data);
+            } else {
+                res.status(404).send({
+                    message: `No se puede encontrar el usuario con el id ${id}.`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Ha surgido algún error al intentar acceder al usuario con el id " + id
+            });
+        });
+};
+
+//-------------------------------------------------------------------------------------
+
 //BORRAMOS TODOS LOS USUARIOS
 UsuarioController.deleteAll = (req, res) => {
     usuario.destroy({
