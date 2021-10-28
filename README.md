@@ -120,6 +120,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
         * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
+        * **delete**: Eliminamos una película por ID.
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
         * **signUp**: Gestionamos el registro en nuestra API.
         * **signIn**: Gestionamos el login en nuestra API.
@@ -145,8 +146,8 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 
 * **seeders**:
     * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
-    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro.
-    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pedido. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro.
+    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
+    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla ingredient, tras introducir el comando sequelize seed:generate --name demo-pedido. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
 
 * **¡IMPORTANTE!** --> Creamos el archivo **.gitignore**, e incluimos lo siguiente (esencial para no subir la carpeta **node_modules** a github cuando hagamos push a nuestros archivos, entre otros):
 ```

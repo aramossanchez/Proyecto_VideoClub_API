@@ -143,4 +143,32 @@ PeliculaController.getByMainCharacter = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
+//BORRAMOS PELICULA, BUSCANDO POR ID
+PeliculaController.delete = (req, res) => {
+
+  const id = req.params.id;
+
+  peliculas.destroy({
+      where: { id: id }
+  })
+      .then(num => {
+          if (num == 1) {
+              res.send({
+                  message: `La película con id ${id} ha sido eliminada correctamente.`
+              });
+          } else {
+              res.send({
+                  message: `No se ha podido eliminar la película con id ${id}.`
+              });
+          }
+      })
+      .catch(err => {
+          res.status(500).send({
+              message: "Ha surgido algún error al intentar borrar la película con el id " + id
+          });
+      });
+};
+
+//-------------------------------------------------------------------------------------
+
 module.exports = PeliculaController;

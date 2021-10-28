@@ -80,3 +80,12 @@
 {"level":"info","message":"::1 - - [28/Oct/2021:15:19:12 +0000] \"GET /pedidos/ HTTP/1.1\" 200 5214 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:19:12.070Z"}
 {"level":"info","message":"::1 - - [28/Oct/2021:15:19:37 +0000] \"DELETE /usuarios/31 HTTP/1.1\" 200 67 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:19:37.920Z"}
 {"level":"info","message":"::1 - - [28/Oct/2021:15:19:43 +0000] \"GET /pedidos/ HTTP/1.1\" 200 5006 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:19:43.963Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:25:14 +0000] \"DELETE /peliculas/1 HTTP/1.1\" 500 81 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:25:14.368Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:25:42 +0000] \"DELETE /peliculas/1 HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:25:42.704Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:25:46 +0000] \"GET /peliculas/ HTTP/1.1\" 200 21923 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:25:46.575Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:34:15 +0000] \"POST /pedidos HTTP/1.1\" 400 49 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:34:15.414Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:34:34 +0000] \"POST /pedidos HTTP/1.1\" 200 206 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:34:34.246Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:44:25 +0000] \"GET /pedidos/ HTTP/1.1\" 200 11077 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:44:25.611Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:46:00 +0000] \"GET /pedidos/ HTTP/1.1\" 200 10907 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:46:00.239Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:46:35 +0000] \"GET /pedidos/ HTTP/1.1\" 200 11077 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:46:35.561Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:47:15 +0000] \"GET /pedidos/ HTTP/1.1\" 200 16771 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:47:15.150Z"}

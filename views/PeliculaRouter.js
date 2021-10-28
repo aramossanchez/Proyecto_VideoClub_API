@@ -12,6 +12,7 @@ router.get('/ciudad/:ciudad', PeliculaController.getByCity);
 router.get('/ciudad/:ciudad/alquilada/:alquilada', PeliculaController.getByCityAndRented);
 router.get('/genero/:genero', PeliculaController.getByGenre);
 router.get('/actor_principal/:actor_principal', PeliculaController.getByMainCharacter);
+router.delete('/:id', PeliculaController.delete);
 // router.post('/', PeliculaController.create);
 // router.put('/:id', PeliculaController.update);
 // router.delete('/:id', PeliculaController.delete);
