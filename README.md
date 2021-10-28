@@ -123,6 +123,8 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **signUp**: Gestionamos el registro en nuestra API.
         * **signIn**: Gestionamos el login en nuestra API.
         * **getAll**: Obtenemos un listado de todos los usuarios.
+        * **getById**: Obtenemos un usuario por ID.
+        * **delete**: Eliminamos un usuario por ID.
         * **deleteAll**: Eliminamos todos los registros de los usuarios.
     * **PedidoController.js**: En este archivo creamos las funciones de cada endpoint:
         * **getAll**: Obtenemos un listado de todos los pedidos realizados.

@@ -75,3 +75,5 @@
 {"level":"info","message":"::1 - - [28/Oct/2021:14:27:04 +0000] \"DELETE /usuarios/4 HTTP/1.1\" 200 66 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T14:27:04.948Z"}
 {"level":"info","message":"::1 - - [28/Oct/2021:14:27:09 +0000] \"GET /usuarios HTTP/1.1\" 200 21411 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T14:27:09.007Z"}
 {"level":"info","message":"::1 - - [28/Oct/2021:14:27:58 +0000] \"DELETE /usuarios/7 HTTP/1.1\" 200 66 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T14:27:58.279Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:02:53 +0000] \"GET /peliculas/ HTTP/1.1\" 200 22125 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:02:53.857Z"}
+{"level":"info","message":"::1 - - [28/Oct/2021:15:03:01 +0000] \"GET /peliculas/titulo/Wolfen HTTP/1.1\" 200 196 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T15:03:01.820Z"}

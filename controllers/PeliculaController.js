@@ -47,6 +47,25 @@ PeliculaController.getById = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
+//OBTENEMOS PELICULA POR TITULO
+PeliculaController.getByTitulo = (req, res) => {
+
+  let titulo = req.params.titulo;
+  
+  peliculas.findAll( {where: {titulo: titulo}})
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Ha surgido algún error al intentar acceder a las películas."
+      });
+    });
+};
+
+//-------------------------------------------------------------------------------------
+
 //OBTENEMOS PELICULA POR CIUDAD
 PeliculaController.getByCity = (req, res) => {
 

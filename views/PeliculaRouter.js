@@ -7,6 +7,7 @@ const PeliculaController = require('../controllers/PeliculaController');
 // End-points CRUD movies
 router.get('/', PeliculaController.getAll);
 router.get('/:id', PeliculaController.getById);
+router.get('/titulo/:titulo', PeliculaController.getByTitulo);
 router.get('/ciudad/:ciudad', PeliculaController.getByCity);
 router.get('/ciudad/:ciudad/alquilada/:alquilada', PeliculaController.getByCityAndRented);
 router.get('/genero/:genero', PeliculaController.getByGenre);
