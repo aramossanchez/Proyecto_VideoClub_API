@@ -132,7 +132,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **update**: Actualizamos la película con el id mandado por la url.
         * **delete**: Eliminamos una película por ID.
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
-        * **signUp**: Gestionamos el registro en nuestra API.
+        * **signUp**: Gestionamos el registro en nuestra API. Existe un mínimo de seguridad en la contraseña creada (mínimo 8 caracteres).
         * **signIn**: Gestionamos el login en nuestra API.
         * **getAll**: Obtenemos un listado de todos los usuarios.
         * **getById**: Obtenemos un usuario por ID.

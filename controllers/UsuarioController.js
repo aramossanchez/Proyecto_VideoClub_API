@@ -39,24 +39,31 @@ UsuarioController.signIn = (req, res) => {
 
 //GESTIONAMOS REGISTRO DE USUARIOS
 UsuarioController.signUp = (req, res) => { 
+    let clave = req.body.clave;
+    if (clave.length >= 8) {//SE ENCRIPTA LA CONTRASEÑA SI MÍNIMO TIENE 8 CARACTERES
+      var password = bcrypt.hashSync(req.body.clave, Number.parseInt(authConfig.rounds));   
 
-    let password = bcrypt.hashSync(req.body.clave, Number.parseInt(authConfig.rounds)); //SE ENCRIPTA LA CONTRASEÑA
-
-    usuario.create({
-        nombre: req.body.nombre,
-        correo: req.body.correo,
-        clave: password
-    }).then(usuario => {
-        let token = jwt.sign({ usuario: usuario }, authConfig.secret, {
-            expiresIn: authConfig.expires
-        });
-        res.json({
-            usuario: usuario,
-            token: token
-        });
-    }).catch(err => {
-        res.status(500).json(err);
+      usuario.create({
+          nombre: req.body.nombre,
+          correo: req.body.correo,
+          clave: password,
+          ciudad: req.body.ciudad
+      }).then(usuario => {
+          let token = jwt.sign({ usuario: usuario }, authConfig.secret, {
+              expiresIn: authConfig.expires
+          });
+          res.json({
+              usuario: usuario,
+              token: token
+          });
+      }).catch(err => {
+          res.status(500).json(err);
+      });
+    }else{
+      res.send({
+        message: `La contraseña tiene que tener un mínimo de 8 caracteres. ${clave}`
     });
+    }
 
 };
 
