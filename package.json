@@ -2,7 +2,7 @@
   "name": "proyectoejemplo",
   "version": "1.0.0",
   "engines": {
-    "node": "14.x"
+    "node": "14.18.0"
   },
   "description": "proyecto ejemplo con base de datos api rest",
   "main": "index.js",
