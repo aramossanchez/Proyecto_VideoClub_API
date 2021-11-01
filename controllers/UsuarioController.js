@@ -74,16 +74,11 @@ UsuarioController.signUp = (req, res) => {
         message: `No tienes permisos para registrar usuarios. Contacta con un administrador.`
       });
     }
-
-    
-
 };
 
 //-------------------------------------------------------------------------------------
 
 //OBTENEMOS LISTADO DE TODAS LOS USUARIOS
-
-
 
 UsuarioController.getAll = (req, res) => {
   
@@ -232,6 +227,7 @@ UsuarioController.deleteAll = (req, res) => {
     });
   }
 };
+
 
 module.exports = UsuarioController;
 
