@@ -145,21 +145,21 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **delete**: Eliminamos un pedido por ID y hacemos que la pelicula pueda volver a ser alquilable.
 
 * **migrations**
-    * **01-create-pelicula.js**: Al introducir el comando:
+    * **01-create-pelicula.js**: Se genera este archivo al introducir el comando:
     ```
     sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean
     ```
-    Se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
-    * **01-create-usuario.js**: Al introducir el comando:
+    Editamos el archivo para indicar que ningún campo pueda ser null.
+    * **01-create-usuario.js**: Se genera este archivo al introducir el comando:
     ```
     sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string
     ```
-    Se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
-    * **03-create-pedido.js**: Al introducir el comando:
+    Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
+    * **03-create-pedido.js**: Se genera este archivo al introducir el comando:
     ```
     sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date`
     ```
-    Se genera este archivo. Además, añadimos a este archivo los 2 campos que van a ser Foreign Key (peliculaId y usuarioId) Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro. También añadimos las Foreign Keys de las otras 2 tablas.
+    Además, añadimos a este archivo los 2 campos que van a ser Foreign Key (peliculaId y usuarioId) Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro. También añadimos las Foreign Keys de las otras 2 tablas.
 
 
 * **models**
