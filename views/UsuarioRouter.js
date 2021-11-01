@@ -9,7 +9,7 @@ router.post('/login', UsuarioController.signIn);
 router.post('/registro', auth, UsuarioController.signUp);
 router.get('/', auth, UsuarioController.getAll);
 router.get('/:id', UsuarioController.getById);
-// router.put('/:id', UsuarioController.update);
+router.put('/:id', UsuarioController.update);
 router.delete('/', auth, UsuarioController.deleteAll);
 router.delete('/:id', auth, UsuarioController.delete);
 

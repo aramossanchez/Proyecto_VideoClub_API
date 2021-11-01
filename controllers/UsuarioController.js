@@ -102,6 +102,30 @@ UsuarioController.getById = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
+UsuarioController.update = (req, res) => {
+    const id = req.params.id;
+  
+    usuario.update(req.body, {
+      where: { id: id }
+    })
+      .then(num => {
+        if (num == 1) {
+          res.send({
+            message: "El usuario ha sido actualizado correctamente."
+          });
+        } else {
+          res.send({
+            message: `No se ha podido actualizar el usuario con el id ${id}`
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Ha surgido algún error al intentar actualizar el usuario con el id " + id + "."
+        });
+      });
+  };
+
 //BORRAMOS A USUARIO, BUSCANDO POR ID
 UsuarioController.delete = (req, res) => {
 

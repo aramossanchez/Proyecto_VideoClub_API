@@ -26,7 +26,8 @@ PedidoController.getAll = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
-//CREATE a new movie in database
+//CREAMOS UN PEDIDO NUEVO
+//SE COMPROBARÁ QUE LA PELÍCULA Y EL USUARIO ESTÁN EN LA MISMA CIUDAD. DESPUÉS SE COMPROBARÁ SI LA PELÍCULA ESTÁ ALQUILADA O NO
 PedidoController.create = (req, res) => {
 
   //COMPROBAMOS SI HAY ALGO EN EL BODY
@@ -96,7 +97,7 @@ PedidoController.create = (req, res) => {
                 })
                 .catch(err => {
                   res.status(500).send({
-                    message: "Error updating Movie with id"
+                    message: "Ha surgido algún error al intentar crear el pedido."
                   });
                 });
             })
@@ -128,13 +129,12 @@ PedidoController.create = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
+//BORRAMOS UN PEDIDO
 PedidoController.delete = (req, res) => {
 
   const id = req.params.id;
 
-  pedido.destroy({
-      where: { id: id }
-  })
+  pedido.destroy({ where: { id: id }})
       .then(num => {
           if (num == 1) {
               res.send({
@@ -152,6 +152,5 @@ PedidoController.delete = (req, res) => {
           });
       });
 };
-
 
 module.exports = PedidoController;
