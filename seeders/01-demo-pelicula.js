@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('peliculas', [
-    {"titulo":"Love Steaks","genero":"(no genres listed)","actor_principal":"Alwyn Atwater","ciudad":"Albacete","alquilada":false,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
+    {"titulo":"Love Steaks","genero":"(no genres listed)","actor_principal":"Alwyn Atwater","ciudad":"Albacete","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"Theory of Flight, The","genero":"Comedy|Drama|Romance","actor_principal":"Lori Puzey","ciudad":"Albacete","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"House I Live In, The","genero":"Documentary","actor_principal":"Petronilla Pickering","ciudad":"Valencia","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"Our Family Wedding","genero":"Comedy","actor_principal":"Ava Burchall","ciudad":"Valencia","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
@@ -17,7 +17,7 @@ module.exports = {
     {"titulo":"Killers","genero":"Action|Crime|Drama|Thriller","actor_principal":"Rickert Klimek","ciudad":"Valencia","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"I Woke Up Early the Day I Died","genero":"Comedy|Crime|Thriller","actor_principal":"Lonnie Inkster","ciudad":"Albacete","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"Children (Börn)","genero":"Drama","actor_principal":"Edyth Alessandrucci","ciudad":"Valencia","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
-    {"titulo":"Mamitas","genero":"Drama","actor_principal":"Cookie Alphege","ciudad":"Getafe","alquilada":false,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
+    {"titulo":"Mamitas","genero":"Drama","actor_principal":"Cookie Alphege","ciudad":"Getafe","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"Family United (La gran familia española)","genero":"Comedy","actor_principal":"Tedi Sneath","ciudad":"Valencia","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"Secrets of the Tribe","genero":"Documentary","actor_principal":"Jinny Pourvoieur","ciudad":"Getafe","alquilada":true,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},
     {"titulo":"Dead of the Nite","genero":"Horror","actor_principal":"Quent Patterson","ciudad":"Getafe","alquilada":false,"createdAt":"2021/10/27","updatedAt":"2021/10/27"},

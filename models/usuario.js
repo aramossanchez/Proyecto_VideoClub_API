@@ -26,7 +26,11 @@ module.exports = (sequelize, DataTypes) => {
     ciudad: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    rol: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'usuario',

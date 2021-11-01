@@ -9,7 +9,7 @@ const PeliculaController = {}; //CREAMOS EL OBJETO CONTROLADOR
 
 //OBTENEMOS LISTADO DE TODAS LAS PELÍCULAS
 PeliculaController.getAll = (req, res) => {
-  
+
     peliculas.findAll()
       .then(data => {
         res.send(data);

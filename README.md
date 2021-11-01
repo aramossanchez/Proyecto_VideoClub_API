@@ -106,7 +106,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     * **auth.js**: En este archivo se gestiona la clave con la que se cifra la password a encriptar, la duración del token y la cantidad de veces que se encripta la password.
 
 * **middlewares**
-    * **auth.js**: En este archivo se gestiona la existencia y uso de los token para acceder a las zonas restringidas de la API.
+    * **auth.js**: En este archivo se gestiona la existencia y uso de los token para acceder a las zonas restringidas de la API. De aquí se obtiene el rol del usuario logado en los **req** de cada controller.
 
 * **logs**: Dentro de este directorio se crea el archivo de logs.
 
@@ -128,14 +128,14 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
         * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
-        * **create**: Creamos una nueva película con la información pasada por el body.
-        * **update**: Actualizamos la película con el id mandado por la url.
-        * **delete**: Eliminamos una película por ID.
+        * **create**: Creamos una nueva película con la información pasada por el body (securizado para que solo pueda acceder un administrador).
+        * **update**: Actualizamos la película con el id mandado por la url (securizado para que solo pueda acceder un administrador).
+        * **delete**: Eliminamos una película por ID (securizado para que solo pueda acceder un administrador).
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
         * **signUp**: Gestionamos el registro en nuestra API. Existe un mínimo de seguridad en la contraseña creada (mínimo 8 caracteres).
-        * **signIn**: Gestionamos el login en nuestra API.
-        * **getAll**: Obtenemos un listado de todos los usuarios.
-        * **getById**: Obtenemos un usuario por ID.
+        * **signIn**: Gestionamos el login en nuestra API (securizado para que solo pueda acceder un administrador).
+        * **getAll**: Obtenemos un listado de todos los usuarios (securizado para que solo pueda acceder un administrador).
+        * **getById**: Obtenemos un usuario por ID (securizado para que solo pueda acceder un administrador o el usuario dueño del perfil).
         * **update**: Actualizamos el usuario con el id mandado por url
         * **delete**: Eliminamos un usuario por ID.
         * **deleteAll**: Eliminamos todos los registros de los usuarios.
@@ -171,7 +171,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
     * **usuario.js**: Archivo creado al usar el comando:
     ```
-    sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string
+    sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string,rol:string
     ```
     En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
     * **pedido.js**: Archivo creado al usar el comando:
@@ -195,11 +195,15 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     ```
     sequelize seed:generate --name demo-pedido
     ```
-    Está la plantilla creada, pero no se genera ningún pedido.
+    Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (3 registros).
 
 * **.gitignore**: Archivo en el que se indica que archivos no se subirán a nuestro repositorio. Está editado de la siguiente manera:
 ```
 /node_modules
 /logs
 package-lock.json
+```
+* **Procfile**: Archivo creado para indicar a la plataforma de despliegue (Heroku) cual es el archivo principal de la aplicación.
+```
+web: node index.js
 ```
