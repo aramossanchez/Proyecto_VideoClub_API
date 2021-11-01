@@ -145,21 +145,57 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **delete**: Eliminamos un pedido por ID y hacemos que la pelicula pueda volver a ser alquilable.
 
 * **migrations**
-    * **01-create-pelicula.js**: Al introducir el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
-    * **01-create-usuario.js**: Al introducir el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
-    * **03-create-pedido.js**: Al introducir el comando sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date se genera este archivo. Además, añadimos a este archivo los 2 campos que van a ser Foreign Key (peliculaId y usuarioId) Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro. También añadimos las Foreign Keys de las otras 2 tablas.
+    * **01-create-pelicula.js**: Al introducir el comando:
+    ```
+    sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean
+    ```
+    Se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
+    * **01-create-usuario.js**: Al introducir el comando:
+    ```
+    sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string
+    ```
+    Se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro.
+    * **03-create-pedido.js**: Al introducir el comando:
+    ```
+    sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date`
+    ```
+    Se genera este archivo. Además, añadimos a este archivo los 2 campos que van a ser Foreign Key (peliculaId y usuarioId) Editamos el archivo para indicar que ningún campo pueda ser null, y que el campo de correo no se pueda repetir en ningún registro. También añadimos las Foreign Keys de las otras 2 tablas.
 
 
 * **models**
     * **index.js**: Gestiona la conexión con la base de datos.
-    * **pelicula.js**: Archivo creado al usar el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **usuario.js**: Archivo creado al usar el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **pedido.js**: Archivo creado al usar el comando sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date En este archivo está creado el esquema de datos que sigue la tabla pedidos de la base de datos. En este archivo añadimos también que ningún campo puede ser null. También indicamos que va a tener 2 Foreign Key, y agregamos los campos que van a ser Foreign Key de las otras 2 tablas.
+    * **pelicula.js**: Archivo creado al usar el comando:
+    ```
+    sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean
+    ```
+    En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
+    * **usuario.js**: Archivo creado al usar el comando:
+    ```
+    sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string
+    ```
+    En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
+    * **pedido.js**: Archivo creado al usar el comando:
+    ```
+    sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date
+    ```
+    En este archivo está creado el esquema de datos que sigue la tabla pedidos de la base de datos. En este archivo añadimos también que ningún campo puede ser null. También indicamos que va a tener 2 Foreign Key, y agregamos los campos que van a ser Foreign Key de las otras 2 tablas.
 
 * **seeders**:
-    * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla peliculas, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (300 registros).
-    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla usuarios, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (50 registros).
-    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla pedidos, tras introducir el comando sequelize seed:generate --name demo-pedido. Está la plantilla creada, pero no se genera ningún pedido.
+    * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla peliculas, tras introducir el comando:
+    ```
+    sequelize seed:generate --name demo-pelicula
+    ```
+    Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (300 registros).
+    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla usuarios, tras introducir el comando:
+    ```
+    sequelize seed:generate --name demo-usuario
+    ```
+    Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (50 registros).
+    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla pedidos, tras introducir el comando:
+    ```
+    sequelize seed:generate --name demo-pedido
+    ```
+    Está la plantilla creada, pero no se genera ningún pedido.
 
 * **.gitignore**: Archivo en el que se indica que archivos no se subirán a nuestro repositorio. Está editado de la siguiente manera:
 ```
