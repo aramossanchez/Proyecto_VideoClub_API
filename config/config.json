@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "remoto",
-    "password": "Consola06",
-    "database": "Videoclub",
-    "host": "192.168.1.132",
+    "username": "b5623d121365b9",
+    "password": "d8fa06d1",
+    "database": "heroku_19468d99ce90afa",
+    "host": "eu-cdbr-west-01.cleardb.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "b5623d121365b9",
+    "password": "d8fa06d1",
+    "database": "heroku_19468d99ce90afa",
+    "host": "eu-cdbr-west-01.cleardb.com",
     "dialect": "mysql"
   },
   "production": {
