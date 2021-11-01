@@ -140,9 +140,9 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
         * **delete**: Eliminamos un usuario por ID.
         * **deleteAll**: Eliminamos todos los registros de los usuarios.
     * **PedidoController.js**: En este archivo creamos las funciones de cada endpoint:
-        * **getAll**: Obtenemos un listado de todos los pedidos realizados.
-        * **create**: Creamos un pedido nuevo. Hay que indicar qué usuario hace el pedido y qué película alquila. La función comprueba si la película está en la ciudad en la que está buscando el usuario, y después comprueba si la película está alquilada o no. Si la película no está en la ciudad del usuario o ya está alquilada, no se podrá hacer el pedido. Si la película sí está en la ciudad del usuario y no está alquilada, se podrá realizar el pedido. Además, actualizada la película recién alquilada y la deja en estado alquilado, para no poder volver a ser alquilada.
-        * **delete**: Eliminamos un pedido por ID y hacemos que la pelicula pueda volver a ser alquilable.
+        * **getAll**: Obtenemos un listado de todos los pedidos realizados (securizado para que solo pueda acceder un administrador).
+        * **create**: Creamos un pedido nuevo. Hay que indicar qué usuario hace el pedido y qué película alquila. La función comprueba si la película está en la ciudad en la que está buscando el usuario, y después comprueba si la película está alquilada o no. Si la película no está en la ciudad del usuario o ya está alquilada, no se podrá hacer el pedido. Si la película sí está en la ciudad del usuario y no está alquilada, se podrá realizar el pedido. Además, actualizada la película recién alquilada y la deja en estado alquilado, para no poder volver a ser alquilada (securizado para que solo pueda acceder un administrador o el usuario dueño del pedido).
+        * **delete**: Eliminamos un pedido por ID y hacemos que la pelicula pueda volver a ser alquilable (securizado para que solo pueda acceder un administrador).
 
 * **migrations**
     * **01-create-pelicula.js**: Se genera este archivo al introducir el comando:
@@ -207,3 +207,31 @@ package-lock.json
 ```
 web: node index.js
 ```
+
+## Explicación de la securización de la API:
+* Los usuarios que no estén logados pueden:
+    * Ver todas las películas que tenemos en la base de datos.
+    * Buscar películas por ID.
+    * Buscar películas por título.
+    * Buscar películas por ciudad.
+    * Buscar películas por ciudad y si están alquiladas.
+    * Buscar películas por genero.
+    * Buscar películas por actor principal.
+    * Buscar películas por ID.
+    * Acceder al login.
+* Los usuarios logueados con rol 'usuario', además de poder hacer todo lo anteriormente mencionado, pueden:
+    * Buscar solo su usuario por ID.
+    * Actualizar solo su usuario por ID.
+    * Borrar solo su usuario por ID.
+    * Crear un pedido para su usuario.
+* Los usuarios logueados con administrador, además de poder hacer todo lo anteriormente mencionado, pueden:
+    * Añadir películas a la base de datos.
+    * Actualizar una película por ID.
+    * Borrar una película por ID.
+    * Registrar un usuario nuevo.
+    * Ver toda la lista de usuarios.
+    * Ver cualquier usuario por su ID.
+    * Actualizar cualquier usuario por su ID.
+    * Borrar todos los usuarios.
+    * Borrar cualquier usuario por su ID.
+
