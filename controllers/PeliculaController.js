@@ -145,59 +145,74 @@ PeliculaController.getByMainCharacter = (req, res) => {
 
 //CREAMOS PELÍCULA NUEVA
 PeliculaController.create = (req, res) => {
+
+  if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA CREARLO EL ADMINISTRADOR
     
-  if (!req.body.titulo) {
-    res.status(400).send({
-      message: "El contenido no puede estar vacío"
+          if (!req.body.titulo) {
+            res.status(400).send({
+              message: "El contenido no puede estar vacío"
+            });
+            return;
+          }
+          
+          const nuevaPelicula = {
+            titulo: req.body.titulo,
+            genero: req.body.genero,
+            actor_principal: req.body.actor_principal,
+            ciudad: req.body.ciudad,
+            alquilada: req.body.alquilada
+          };
+          
+          peliculas.create(nuevaPelicula)
+            .then(data => {
+              res.send(data);
+            })
+            .catch(err => {
+              res.status(500).send({
+                message:
+                  err.message || "Ha surgido algún error al intentar crear la película."
+              });
+            });
+  }else{
+    res.send({
+      message: `No tienes permisos para borrar peliculas. Contacta con un administrador.`
     });
-    return;
   }
-  
-  const nuevaPelicula = {
-    titulo: req.body.titulo,
-    genero: req.body.genero,
-    actor_principal: req.body.actor_principal,
-    ciudad: req.body.ciudad,
-    alquilada: req.body.alquilada
-  };
-  
-  peliculas.create(nuevaPelicula)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Ha surgido algún error al intentar crear la película."
-      });
-    });
 };
 
 //-------------------------------------------------------------------------------------
 
 //ACTUALIZAMOS PELICULA EXISTENTE
 PeliculaController.update = (req, res) => {
-  const id = req.params.id;
 
-  peliculas.update(req.body, {
-    where: { id: id }
-  })
-    .then(num => {
-      if (num == 1) {
-        res.send({
-          message: "La película ha sido actualizada correctamente."
-        });
-      } else {
-        res.send({
-          message: `No se ha podido actualizar la película con el id ${id}`
-        });
-      }
-    })
-    .catch(err => {
-      res.status(500).send({
-        message: "Ha surgido algún error al intentar actualizar la película con el id " + id + "."
-      });
+  if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA ACTUALIZARLO EL ADMINISTRADOR
+
+          const id = req.params.id;
+
+          peliculas.update(req.body, {
+            where: { id: id }
+          })
+            .then(num => {
+              if (num == 1) {
+                res.send({
+                  message: "La película ha sido actualizada correctamente."
+                });
+              } else {
+                res.send({
+                  message: `No se ha podido actualizar la película con el id ${id}`
+                });
+              }
+            })
+            .catch(err => {
+              res.status(500).send({
+                message: "Ha surgido algún error al intentar actualizar la película con el id " + id + "."
+              });
+            });
+  }else{
+    res.send({
+      message: `No tienes permisos para actualizar la información de la película. Contacta con un administrador.`
     });
+  }
 };
 
 //-------------------------------------------------------------------------------------
@@ -205,27 +220,34 @@ PeliculaController.update = (req, res) => {
 //BORRAMOS PELICULA, BUSCANDO POR ID
 PeliculaController.delete = (req, res) => {
 
-  const id = req.params.id;
+  if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
-  peliculas.destroy({
-      where: { id: id }
-  })
-      .then(num => {
-          if (num == 1) {
-              res.send({
-                  message: `La película con id ${id} ha sido eliminada correctamente.`
-              });
-          } else {
-              res.send({
-                  message: `No se ha podido eliminar la película con id ${id}.`
-              });
-          }
-      })
-      .catch(err => {
-          res.status(500).send({
-              message: "Ha surgido algún error al intentar borrar la película con el id " + id
-          });
-      });
+        const id = req.params.id;
+
+        peliculas.destroy({
+            where: { id: id }
+        })
+            .then(num => {
+                if (num == 1) {
+                    res.send({
+                        message: `La película con id ${id} ha sido eliminada correctamente.`
+                    });
+                } else {
+                    res.send({
+                        message: `No se ha podido eliminar la película con id ${id}.`
+                    });
+                }
+            })
+            .catch(err => {
+                res.status(500).send({
+                    message: "Ha surgido algún error al intentar borrar la película con el id " + id
+                });
+            });
+  }else{
+    res.send({
+      message: `No tienes permisos para borra la película. Contacta con un administrador.`
+    });
+  }
 };
 
 //-------------------------------------------------------------------------------------
