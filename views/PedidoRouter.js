@@ -4,9 +4,9 @@ const auth = require('../middlewares/auth.js');
 
 const PedidoController = require('../controllers/PedidoController');
 
-router.get('/', PedidoController.getAll);
-router.post('/', PedidoController.create);
-router.delete('/:id', PedidoController.delete);
+router.get('/', auth, PedidoController.getAll);
+router.post('/', auth, PedidoController.create);
+router.delete('/:id', auth, PedidoController.delete);
 
 
 module.exports = router;
