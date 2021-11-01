@@ -145,3 +145,49 @@
 {"level":"info","message":"::1 - - [28/Oct/2021:17:06:24 +0000] \"GET /peliculas/ HTTP/1.1\" 200 65605 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T17:06:24.351Z"}
 {"level":"info","message":"::1 - - [28/Oct/2021:17:06:31 +0000] \"GET /peliculas/ciudad/Valencia HTTP/1.1\" 200 19794 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T17:06:31.944Z"}
 {"level":"info","message":"::1 - - [28/Oct/2021:17:06:40 +0000] \"POST /pedidos HTTP/1.1\" 404 46 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-28T17:06:40.279Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:17:07 +0000] \"GET /pedidos/ HTTP/1.1\" 200 18471 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:17:07.733Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:17:49 +0000] \"POST /pedidos HTTP/1.1\" 404 46 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:17:49.626Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:18:00 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:18:00.065Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:18:18 +0000] \"GET /pedidos/ HTTP/1.1\" 200 19142 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:18:18.982Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:18:31 +0000] \"GET /peliculas/26 HTTP/1.1\" 200 206 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:18:31.136Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:19:12 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:19:12.653Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:19:56 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:19:56.540Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:20:07 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:20:07.466Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:21:18 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:21:18.286Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:22:03 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:22:03.607Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:22:28 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:22:28.218Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:22:48 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:22:48.992Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:25:10 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:25:10.280Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:29:52 +0000] \"POST /pedidos HTTP/1.1\" 404 76 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:29:52.192Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:30:22 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:30:22.764Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:30:58 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:30:58.398Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:32:47 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:32:47.321Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:33:23 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:33:23.229Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:34:13 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:34:13.904Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:34:48 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:34:48.012Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:35:55 +0000] \"POST /pedidos HTTP/1.1\" 200 90 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:35:55.276Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:36:27 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:36:27.502Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:37:04 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:37:04.090Z"}
+{"level":"info","message":"::1 - - [29/Oct/2021:07:37:43 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-10-29T07:37:43.773Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:21:53 +0000] \"GET /pedidos/ HTTP/1.1\" 200 31201 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:21:53.971Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:22:21 +0000] \"GET /pedidos/ HTTP/1.1\" 200 2 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:22:21.440Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:22:24 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:22:24.557Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:23:02 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:23:02.208Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:23:14 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:23:14.366Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:23:36 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:23:36.047Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:24:34 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:24:34.813Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:25:28 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:25:28.522Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:25:49 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:25:49.601Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:26:14 +0000] \"GET /static/js/bundle.js HTTP/1.1\" 404 158 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-11-01T09:26:14.849Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:26:14 +0000] \"GET /static/js/main.chunk.js HTTP/1.1\" 404 162 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-11-01T09:26:14.855Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:26:14 +0000] \"GET /static/js/vendors~main.chunk.js HTTP/1.1\" 404 170 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-11-01T09:26:14.859Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:26:14 +0000] \"GET /manifest.json HTTP/1.1\" 404 152 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-11-01T09:26:14.893Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:27:47 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:27:47.291Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:28:18 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:28:18.847Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:28:30 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:28:30.621Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:29:21 +0000] \"POST /pedidos HTTP/1.1\" 500 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:29:21.523Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:29:28 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:29:28.435Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:30:32 +0000] \"POST /pedidos HTTP/1.1\" 200 207 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:30:32.326Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:30:37 +0000] \"POST /pedidos HTTP/1.1\" 404 46 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:30:37.994Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:31:24 +0000] \"GET /pedidos/ HTTP/1.1\" 200 8711 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:31:24.622Z"}
+{"level":"info","message":"::1 - - [01/Nov/2021:09:31:32 +0000] \"POST /pedidos HTTP/1.1\" 404 46 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T09:31:32.413Z"}

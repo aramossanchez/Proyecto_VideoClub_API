@@ -46,6 +46,7 @@ PedidoController.create = (req, res) => {
     .then(data => {
       if (data) {
         ciudadUsuarioBuscado = data.ciudad;
+        usuarioBuscado = data;
       } else {
         res.status(404).send({
           message: `No se puede encontrar la película con el id ${id}.`
@@ -59,12 +60,14 @@ PedidoController.create = (req, res) => {
     });
 
 //BUSCAMOS CIUDAD DE USUARIO
+  var peliculaBuscada = "q";
   var ciudadPeliculaBuscada = "b";
   pelicula.findByPk(req.body.peliculaId)
     .then(data => {
       
       //COMPROBAMOS SI LAS 2 CIUDADES SON IGUALES Y SI LA PELÍCULA ESTÁ YA ALQUILADA
       if (data) {
+        peliculaBuscada = data;
         ciudadPeliculaBuscada = data.ciudad;
       }
       if (ciudadPeliculaBuscada == ciudadUsuarioBuscado && data.alquilada == false) {
@@ -77,6 +80,25 @@ PedidoController.create = (req, res) => {
           pedido.create(nuevoPedido)
             .then(data => {
               res.send(data);
+              peliculaBuscada.alquilada = true;
+              console.log(peliculaBuscada.alquilada);
+              pelicula.update( {alquilada: true},{ where: { id: peliculaBuscada.id }})
+                .then(num => {
+                  if (num == 1) {
+                    // res.send({
+                    //   message: "Movie was updated successfully."
+                    // });
+                  } else {
+                    // res.send({
+                    //   message: `Cannot update Movie with id. Maybe Movie was not found or req.body is empty!`
+                    // });
+                  }
+                })
+                .catch(err => {
+                  res.status(500).send({
+                    message: "Error updating Movie with id"
+                  });
+                });
             })
             .catch(err => {
               res.status(500).send({
@@ -102,21 +124,10 @@ PedidoController.create = (req, res) => {
         message: "Ha surgido algún error al intentar acceder al usuario con el id " + req.body.usuarioId
       });
     });
+
+
     
-    console.log(ciudadPeliculaBuscada);
-
-  //COMPROBAMOS SI LA PELICULA Y EL USUARIO ESTÁN EN LA MISMA CIUDAD
-  //SI LO ESTÁN, TODO OK. SI NO, MOSTRARÁ ERROR Y NO SE CREARÁ EL PEDIDO
-  const comprobarCiudad = (pelicula, usuario) =>{
-      
-  };
-
-  comprobarCiudad(ciudadPeliculaBuscada, ciudadUsuarioBuscado);
-
-
-  
-
-  
+console.log(ciudadPeliculaBuscada);
 };
 
 //-------------------------------------------------------------------------------------
