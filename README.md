@@ -1,8 +1,8 @@
 # Proyecto VideoClub API
 
-## Proyecto realizado para Geeks Hubs Academy, en el que se solicita realizar la API de un videoclub con reparto de películas a domicilio.
+## Proyecto realizado para GeeksHubs Academy, en el que se solicita realizar la API de un videoclub con reparto de películas a domicilio.
 
-## Pre-requisitos del proyecto:
+## Pre-requisitos del proyecto para hacerlo funcionar en tu equipo local:
 
 * Instalar **Nodejs** en nuestro equipo, descargándolo de su página oficial
 https://nodejs.org/
@@ -15,6 +15,11 @@ $git clone 'url-del-repositorio'
 * Instalar todas las dependecias con el siguiente comando:
 ```
 npm install
+```
+
+* Arrancamos el servidor con el siguiente comando:
+```
+npm run start
 ```
 
 ## Creación de la base de datos
@@ -35,7 +40,10 @@ sequelize db:seed:all
 
 ## Uso de la API
 
-Botón para usar la colección de postman, en donde están todos los endpoints para poder manipular la base de datos: [![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f?action=collection%2Ffork&collection-url=entityId%3D11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f%26entityType%3Dcollection%26workspaceId%3D8cbf41ec-fd52-44cd-82e7-1a6bcbebc7d5)
+Botón para usar la colección de postman, en donde están todos los endpoints para poder manipular la base de datos:
+<br>
+
+ [![Ejecutar en Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f?action=collection%2Ffork&collection-url=entityId%3D11138723-eeb5cf01-1f60-493f-9755-3a67dcc8988f%26entityType%3Dcollection%26workspaceId%3D8cbf41ec-fd52-44cd-82e7-1a6bcbebc7d5)
 
 ## Tecnologías utilizadas en el proyecto:
 
@@ -104,35 +112,37 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 
 * **db.js**: En este archivo se gestiona el acceso a la base de datos.
 
-* **router.js**: En este archivo se gestiona las diferentes vistas que puede tener la aplicación. Se creará una ruta por cada tabla de la base de datos a la que queramos acceder (Ingrediente, Recipes, Contains y Users).
+* **router.js**: En este archivo se gestiona las diferentes vistas que puede tener la aplicación. Se creará una ruta por cada tabla de la base de datos a la que queramos acceder (películas, usuarios y pedidos).
 
 * **views**
-    * **UsuarioRouter.js**: En este archivo gestionamos la ruta /usuarios y los endpoints que apuntan a dicha ruta.
     * **PeliculaRouter.js**: En este archivo gestionamos la ruta /peliculas y los endpoints que apuntan a dicha ruta.
+    * **UsuarioRouter.js**: En este archivo gestionamos la ruta /usuarios y los endpoints que apuntan a dicha ruta.
     * **PedidoRouter.js**: En este archivo gestionamos la ruta /pedidos y los endpoints que apuntan a dicha ruta.
 
 * **controllers**
     * **PeliculaController.js**: En este archivo creamos las funciones de cada endpoint:
         * **getAll**: Obtenemos un listado de todas las películas.
         * **getById**: Obtenemos la película buscada por ID.
-        * **getByTitle**: Obtenemos un listado de las películas filtrado por el titulo de la película.
+        * **getByTitulo**: Obtenemos un listado de las películas filtrado por el titulo de la película.
         * **getByCity**: Obtenemos un listado de las películas filtrado por la ciudad en donde se puede alquilar.
         * **getByCityAndRented**: Obtenemos un listado de las películas filtrado por la ciudad y por la disponibilidad para ser alquilado.
         * **getByGenre**: Obtenemos un listado de las películas filtrado por el género.
         * **getByMainCharacter**: Obtenemos un listado de las películas filtrado por actor principal.
+        * **create**: Creamos una nueva película con la información pasada por el body.
+        * **update**: Actualizamos la película con el id mandado por la url.
         * **delete**: Eliminamos una película por ID.
     * **UsuarioController.js**: En este archivo creamos las funciones de cada endpoint:
         * **signUp**: Gestionamos el registro en nuestra API.
         * **signIn**: Gestionamos el login en nuestra API.
         * **getAll**: Obtenemos un listado de todos los usuarios.
         * **getById**: Obtenemos un usuario por ID.
+        * **update**: Actualizamos el usuario con el id mandado por url
         * **delete**: Eliminamos un usuario por ID.
         * **deleteAll**: Eliminamos todos los registros de los usuarios.
     * **PedidoController.js**: En este archivo creamos las funciones de cada endpoint:
         * **getAll**: Obtenemos un listado de todos los pedidos realizados.
-        * **create**: Creamos un pedido nuevo. Hay que indicar qué usuario hace el pedido y qué película alquila. También hay que comprobar si la película está en la ciudad en la que está buscando el usuario, y después comprobar si la película está alquilada o no. Si la película no está en la ciudad del usuario o ya está alquilada, no se podrá hacer el pedido. Si la película sí está en la ciudad del usuario y no está alquilada, se podrá realizar el pedido.
-
-    
+        * **create**: Creamos un pedido nuevo. Hay que indicar qué usuario hace el pedido y qué película alquila. La función comprueba si la película está en la ciudad en la que está buscando el usuario, y después comprueba si la película está alquilada o no. Si la película no está en la ciudad del usuario o ya está alquilada, no se podrá hacer el pedido. Si la película sí está en la ciudad del usuario y no está alquilada, se podrá realizar el pedido. Además, actualizada la película recién alquilada y la deja en estado alquilado, para no poder volver a ser alquilada.
+        * **delete**: Eliminamos un pedido por ID y hacemos que la pelicula pueda volver a ser alquilable.
 
 * **migrations**
     * **01-create-pelicula.js**: Al introducir el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean se genera este archivo. Editamos el archivo para indicar que ningún campo pueda ser null.
@@ -142,16 +152,16 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
 
 * **models**
     * **index.js**: Gestiona la conexión con la base de datos.
-    * **pelicula.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **usuario.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
-    * **pedido.js**: Archivo creado al usar el comando sequelize model:generate... En este archivo está creado el esquema de datos que sigue la tabla pedidos de la base de datos. En este archivo añadimos también que ningún campo puede ser null. También indicamos que va a tener 2 Foreign Key, y agregamos los campos que van a ser Foreign Key de las otras 2 tablas.
+    * **pelicula.js**: Archivo creado al usar el comando sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean En este archivo está creado el esquema de datos que sigue la tabla peliculas de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
+    * **usuario.js**: Archivo creado al usar el comando sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string En este archivo está creado el esquema de datos que sigue la tabla usuarios de la base de datos. En este archivo añadimos también que ningún campo puede ser null.
+    * **pedido.js**: Archivo creado al usar el comando sequelize model:generate --name pedido --attributes fecha_alquiler:date,fecha_devolucion:date En este archivo está creado el esquema de datos que sigue la tabla pedidos de la base de datos. En este archivo añadimos también que ningún campo puede ser null. También indicamos que va a tener 2 Foreign Key, y agregamos los campos que van a ser Foreign Key de las otras 2 tablas.
 
 * **seeders**:
-    * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla peliculas, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
-    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla usuarios, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
-    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla pedidos, tras introducir el comando sequelize seed:generate --name demo-pedido. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL.
+    * **01-demo-pelicula**: Se genera plantilla para la creación de registros para la tabla peliculas, tras introducir el comando sequelize seed:generate --name demo-pelicula. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (300 registros).
+    * **02-demo-usuario**: Se genera plantilla para la creación de registros para la tabla usuarios, tras introducir el comando sequelize seed:generate --name demo-usuario. Para agregar registros en este seeder necesitamos introducir la función de cifrado de contraseña en cada registro. Añadimos registros en esta plantilla para poder agregarlos directamente a la base de datos de MySQL (50 registros).
+    * **03-demo-pedido**: Se genera plantilla para la creación de registros para la tabla pedidos, tras introducir el comando sequelize seed:generate --name demo-pedido. Está la plantilla creada, pero no se genera ningún pedido.
 
-* **¡IMPORTANTE!** --> Creamos el archivo **.gitignore**, e incluimos lo siguiente (esencial para no subir la carpeta **node_modules** a github cuando hagamos push a nuestros archivos, entre otros):
+* **.gitignore**: Archivo en el que se indica que archivos no se subirán a nuestro repositorio. Está editado de la siguiente manera:
 ```
 /node_modules
 /logs

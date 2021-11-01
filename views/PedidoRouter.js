@@ -6,7 +6,7 @@ const PedidoController = require('../controllers/PedidoController');
 
 router.get('/', PedidoController.getAll);
 router.post('/', PedidoController.create);
-router.delete('/:id', auth, PedidoController.delete);
+router.delete('/:id', PedidoController.delete);
 
 
 module.exports = router;

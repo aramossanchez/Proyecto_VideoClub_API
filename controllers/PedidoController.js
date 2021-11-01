@@ -87,11 +87,11 @@ PedidoController.create = (req, res) => {
                 .then(num => {
                   if (num == 1) {
                     // res.send({
-                    //   message: "Movie was updated successfully."
+                    //   message: ""
                     // });
                   } else {
                     // res.send({
-                    //   message: `Cannot update Movie with id. Maybe Movie was not found or req.body is empty!`
+                    //   message: ``
                     // });
                   }
                 })
@@ -134,12 +134,50 @@ PedidoController.delete = (req, res) => {
 
   const id = req.params.id;
 
+  let idPelicula = 0;
+
+  //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
+  pedido.findByPk(id)
+        .then(data => {
+            if (data) {
+                idPelicula = data.peliculaId
+                res.send(data);
+            } else {
+                res.status(404).send({
+                    message: `No se puede encontrar el pedido con el id ${id}.`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Ha surgido algún error al intentar acceder al pedido con el id " + id
+            });
+        });
+
+  //ELIMINAMOS PEDIDO
   pedido.destroy({ where: { id: id }})
       .then(num => {
           if (num == 1) {
+                  pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
+                  .then(num => {
+                    if (num == 1) {
+                      // res.send({
+                      //   message: ""
+                      // });
+                    } else {
+                      // res.send({
+                      //   message: ``
+                      // });
+                    }
+                  })
+                  .catch(err => {
+                    res.status(500).send({
+                      message: "Ha surgido algún error al intentar crear el pedido."
+                    });
+                  });
               res.send({
-                  message: `El pedido con id ${id} ha sido eliminada correctamente.`
-              });
+                message: `El pedido con id ${id} ha sido eliminada correctamente.`
+            });
           } else {
               res.send({
                   message: `No se ha podido eliminar el pedido con id ${id}.`
