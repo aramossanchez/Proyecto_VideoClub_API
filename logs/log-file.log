@@ -452,4 +452,3 @@
 {"level":"info","message":"::1 - - [01/Nov/2021:18:40:12 +0000] \"POST /pedidos HTTP/1.1\" 200 54 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T18:40:12.108Z"}
 {"level":"info","message":"::1 - - [01/Nov/2021:18:41:46 +0000] \"POST /pedidos HTTP/1.1\" 200 205 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T18:41:46.339Z"}
 {"level":"info","message":"::1 - - [01/Nov/2021:18:41:49 +0000] \"POST /pedidos HTTP/1.1\" 404 46 \"-\" \"PostmanRuntime/7.28.4\"\n","timestamp":"2021-11-01T18:41:49.158Z"}
-{"level":"info","message":"::1 - - [01/Nov/2021:19:17:47 +0000] \"GET / HTTP/1.1\" 200 31 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\"\n","timestamp":"2021-11-01T19:17:47.052Z"}

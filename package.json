@@ -1,10 +1,6 @@
 {
   "name": "proyectoejemplo",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.18.0",
-    "npm": "6.14.15"
-  },
   "description": "proyecto ejemplo con base de datos api rest",
   "main": "index.js",
   "scripts": {
@@ -20,7 +16,7 @@
   "author": "Armando Ramos",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
+    "bcrypt": "^5.0.1",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
