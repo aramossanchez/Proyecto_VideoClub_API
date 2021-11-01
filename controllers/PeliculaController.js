@@ -124,7 +124,7 @@ PeliculaController.getByGenre = (req, res) => {
 
 //-------------------------------------------------------------------------------------
 
-//OBTENEMOS PELICULA POR GENERO
+//OBTENEMOS PELICULA POR ACTOR PRINCIPAL
 PeliculaController.getByMainCharacter = (req, res) => {
 
   let actor = req.params.actor_principal;
@@ -137,6 +137,65 @@ PeliculaController.getByMainCharacter = (req, res) => {
       res.status(500).send({
         message:
           err.message || "Ha surgido algún error al intentar acceder a las películas."
+      });
+    });
+};
+
+//-------------------------------------------------------------------------------------
+
+//CREAMOS PELÍCULA NUEVA
+PeliculaController.create = (req, res) => {
+    
+  if (!req.body.titulo) {
+    res.status(400).send({
+      message: "El contenido no puede estar vacío"
+    });
+    return;
+  }
+  
+  const nuevaPelicula = {
+    titulo: req.body.titulo,
+    genero: req.body.genero,
+    actor_principal: req.body.actor_principal,
+    ciudad: req.body.ciudad,
+    alquilada: req.body.alquilada
+  };
+  
+  peliculas.create(nuevaPelicula)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Ha surgido algún error al intentar crear la película."
+      });
+    });
+};
+
+//-------------------------------------------------------------------------------------
+
+//ACTUALIZAMOS PELICULA EXISTENTE
+PeliculaController.update = (req, res) => {
+  const id = req.params.id;
+
+  peliculas.update(req.body, {
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "La película ha sido actualizada correctamente."
+        });
+      } else {
+        res.send({
+          message: `No se ha podido actualizar la película con el id ${id}`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Ha surgido algún error al intentar actualizar la película con el id " + id + "."
       });
     });
 };

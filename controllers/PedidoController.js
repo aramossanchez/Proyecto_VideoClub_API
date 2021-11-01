@@ -124,13 +124,34 @@ PedidoController.create = (req, res) => {
         message: "Ha surgido algún error al intentar acceder al usuario con el id " + req.body.usuarioId
       });
     });
-
-
-    
-console.log(ciudadPeliculaBuscada);
 };
 
 //-------------------------------------------------------------------------------------
+
+PedidoController.delete = (req, res) => {
+
+  const id = req.params.id;
+
+  pedido.destroy({
+      where: { id: id }
+  })
+      .then(num => {
+          if (num == 1) {
+              res.send({
+                  message: `El pedido con id ${id} ha sido eliminada correctamente.`
+              });
+          } else {
+              res.send({
+                  message: `No se ha podido eliminar el pedido con id ${id}.`
+              });
+          }
+      })
+      .catch(err => {
+          res.status(500).send({
+              message: "Ha surgido algún error al intentar borrar el pedido con el id " + id
+          });
+      });
+};
 
 
 module.exports = PedidoController;
