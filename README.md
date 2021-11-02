@@ -1,6 +1,10 @@
 # Proyecto VideoClub API
 
 ## Proyecto realizado para GeeksHubs Academy, en el que se solicita realizar la API de un videoclub con reparto de películas a domicilio.
+Nos indican que el proyecto constará de 3 tablas: películas, usuarios y pedidos. Los usuarios podrán hacer un pedido de una sola película. Los usuarios podrán tener varios pedidos o ninguno, pero en un pedido solo podrá aparecer un usuario (1:N). Las películas podrán aparecer en varios pedidos o en ninguno, pero en un pedido solo podrá aparece una película (1:N). La relación entre tablas sería la siguiente:
+***
+![Portfolio Carta](screenshots/screenshot.jpg)
+***
 
 ## Pre-requisitos del proyecto para hacerlo funcionar en tu equipo local:
 
@@ -150,7 +154,7 @@ Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CR
     sequelize model:generate --name pelicula --attributes titulo:string,genero:string,actores:string,ciudad:string,alquilada:boolean
     ```
     Editamos el archivo para indicar que ningún campo pueda ser null.
-    * **01-create-usuario.js**: Se genera este archivo al introducir el comando:
+    * **02-create-usuario.js**: Se genera este archivo al introducir el comando:
     ```
     sequelize model:generate --name usuario --attributes nombre:string,correo:string,clave:string,ciudad:string
     ```
@@ -234,4 +238,9 @@ web: node index.js
     * Actualizar cualquier usuario por su ID.
     * Borrar todos los usuarios.
     * Borrar cualquier usuario por su ID.
+
+## Particularidades de la rama de despliegue
+En esta rama existen modificaciones en diferentes archivos, para poder hacer la conexión en la plataforma en la que está desplegada la API (Heroku). Las diferencias son las siguientes:
+* En el archivo **/config/config.json** se modifican los paramétros de conexión para acceder a la base de datos creada en Heroku.
+* En el archivo **03-demo-pedido** se modifican los registros de pedidos, teniendo en cuenta la manera de numerar los ID de los registros en la base de datos de Heroku.
 
