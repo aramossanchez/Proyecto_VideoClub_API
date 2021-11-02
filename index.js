@@ -36,10 +36,9 @@ const swaggerDoc = swaggerJSDoc({
 app.use(morgan('combined', { stream: logger.stream }));//GENERO LOGS
 app.use(express.json()); //PUEDO OBTENER JSON DEL BODY
 app.use(cors(corsOptions));  //USO CORS
-app.use('/documentacion', swaggerUI.serve,swaggerUI.setup(swaggerDoc))//EN LA URL /documentacion PODEMOS VER LA DOCUMENTACION CREADA CON SWAGGER
+app.use('/', swaggerUI.serve,swaggerUI.setup(swaggerDoc))//EN LA URL /documentacion PODEMOS VER LA DOCUMENTACION CREADA CON SWAGGER
 
 //RUTAS
-app.get('/', (req, res) => {res.send('Bienvenidos a nuestro VideoClub');}); //PANTALLA DE BIENVENIDA EN PANTALLA DE INICIO
 app.use(router);
 
 db.then(()=>{
