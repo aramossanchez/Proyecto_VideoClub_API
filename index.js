@@ -38,6 +38,12 @@ app.use(express.json()); //PUEDO OBTENER JSON DEL BODY
 app.use(cors(corsOptions));  //USO CORS
 app.use('/', swaggerUI.serve,swaggerUI.setup(swaggerDoc))//EN LA URL /documentacion PODEMOS VER LA DOCUMENTACION CREADA CON SWAGGER
 
+/**
+* @swagger
+* /:
+* get:
+*/
+
 //RUTAS
 app.use(router);
 
