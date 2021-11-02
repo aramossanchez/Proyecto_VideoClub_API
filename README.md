@@ -102,7 +102,7 @@ npm install bcrypt
 
 Usamos el modelo vista-controlador para estructurar el proyecto. **Creamos un CRUD básico**. En el proyecto existirá la siguiente estructura:
 
-* **index.js**: Este es el archivo principal. En este archivo se llama al archivo de las rutas, se gestiona la creación de logs, se gestiona la ruta inicial (/), la documentación de swagger (para poder ver en la plataforma de despliegue una documentación de la API) y se arranca el servidor.
+* **index.js**: Este es el archivo principal. En este archivo se llama al archivo de las rutas, se gestiona la creación de logs, se gestiona la ruta inicial (/) y se arranca el servidor.
 
 * **config**
     * **winston.js**: En este archivo se crea la configuración para que se guarden los logs de la aplicación.
