@@ -41,7 +41,7 @@ app.use('/', swaggerUI.serve,swaggerUI.setup(swaggerDoc))//EN LA URL /documentac
 /**
 * @swagger
 * /:
-* get:
+*   get:
 */
 
 //RUTAS
