@@ -40,8 +40,14 @@ app.use('/', swaggerUI.serve,swaggerUI.setup(swaggerDoc))//EN LA URL /documentac
 
 /**
 * @swagger
-* /:
+* /peliculas:
 *   get:
+*       produces:
+*           - text/html
+*       responses:
+*           200:
+*               description:
+*                   Ver todas las películas
 */
 
 //RUTAS
