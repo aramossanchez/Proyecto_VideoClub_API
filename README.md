@@ -93,10 +93,6 @@ npm install jsonwebtoken
 ```
 npm install bcrypt
 ```
-* **swagger-jsdoc y swagger-ui-express**: Instalamos swagger-jsdoc y swagger-ui-express en nuestro proyecto, para documentar nuestra API en la plataforma donde la tenemos desplegada:
-```
-npm install swagger-jsdoc swagger-ui-express
-```
 
 ## Explicación de la estructura del proyecto
 
