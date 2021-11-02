@@ -192,7 +192,7 @@ PedidoController.delete = (req, res) => {
                           });
                         });
                     res.send({
-                      message: `El pedido con id ${id} ha sido eliminada correctamente.`
+                      message: `El pedido con id ${id} ha sido eliminado correctamente.`
                   });
                 } else {
                     res.send({
