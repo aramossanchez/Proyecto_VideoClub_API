@@ -7,7 +7,7 @@ const router = require('./router.js');
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3000; //CONFIGURO PUERTO HEROKU
+const PORT = process.env.PORT; //CONFIGURO PUERTO HEROKU
 
 var corsOptions = {//CONFIGURO OPCIONES DE CORS
     origin: "*",
