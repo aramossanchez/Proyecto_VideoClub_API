@@ -52,7 +52,7 @@ UsuarioController.signUp = (req, res) => {
                 correo: req.body.correo,
                 clave: password,
                 ciudad: req.body.ciudad,
-                rol: req.body.ciudad
+                rol: req.body.rol
             }).then(usuario => {
                 let token = jwt.sign({ usuario: usuario }, authConfig.secret, {
                     expiresIn: authConfig.expires
