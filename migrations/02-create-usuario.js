@@ -8,10 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nombre: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
       correo: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -21,7 +17,27 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      dni: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      nombre: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      apellidos: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      direccion: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       ciudad: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      telefono: {
         type: Sequelize.STRING,
         allowNull: false
       },
