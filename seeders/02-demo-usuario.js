@@ -6,6 +6,7 @@ const authConfig = require('../config/auth');
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('usuarios', [
+    {"correo":"admin@admin.com","clave":bcrypt.hashSync("12345678", Number.parseInt(authConfig.rounds)),"dni":"13917678T","nombre":"Armando","apellidos":"Ramos Sánchez","direccion":"C/ Querequere, número 39, 6ºC","ciudad":"Getafe","telefono":"+34-600100200","rol":"administrador","createdAt":"2021-10-27","updatedAt":"2021-10-27"},
     {"correo":"gvella0@typepad.com","clave":bcrypt.hashSync("fohtyuhh", Number.parseInt(authConfig.rounds)),"dni":"13917678T","nombre":"Loïca","apellidos":"Gawen Vella","direccion":"C/ Edgkiobzjom, número 39, 6ºW","ciudad":"Getafe","telefono":"+34-606976823","rol":"usuario","createdAt":"2021-10-27","updatedAt":"2021-10-27"},
     {"correo":"bsyddon1@mac.com","clave":bcrypt.hashSync("pexcedvo", Number.parseInt(authConfig.rounds)),"dni":"96059859L","nombre":"Bérengère","apellidos":"Bryan Syddon","direccion":"C/ Gtijodmxwew, número 52, 6ºV","ciudad":"Valencia","telefono":"+34-610998997","rol":"usuario","createdAt":"2021-10-27","updatedAt":"2021-10-27"},
     {"correo":"nbabinski2@buzzfeed.com","clave":bcrypt.hashSync("cjosytgt", Number.parseInt(authConfig.rounds)),"dni":"72525263R","nombre":"Eléa","apellidos":"Neill Babinski","direccion":"C/ Cxqhxlfonmd, número 29, 4ºF","ciudad":"Valencia","telefono":"+34-694163094","rol":"usuario","createdAt":"2021-10-27","updatedAt":"2021-10-27"},
