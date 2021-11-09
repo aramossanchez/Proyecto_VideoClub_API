@@ -48,10 +48,14 @@ UsuarioController.signUp = (req, res) => {
             var password = bcrypt.hashSync(req.body.clave, Number.parseInt(authConfig.rounds));   
 
             usuario.create({
-                nombre: req.body.nombre,
                 correo: req.body.correo,
                 clave: password,
+                dni: req.body.dni,
+                nombre: req.body.nombre,
+                apellidos: req.body.apellidos,
+                direccion: req.body.direccion,
                 ciudad: req.body.ciudad,
+                telefono: req.body.telefono,
                 rol: req.body.rol
             }).then(usuario => {
                 let token = jwt.sign({ usuario: usuario }, authConfig.secret, {
