@@ -12,6 +12,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      caratula: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      imagen_promocional: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       genero: {
         type: Sequelize.STRING,
         allowNull: false,
