@@ -148,7 +148,7 @@ PedidoController.delete =  async (req, res) => {
 
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
-        const id = req.params.id;
+        let id = req.params.id;
 
         let idPelicula = 0;
 
