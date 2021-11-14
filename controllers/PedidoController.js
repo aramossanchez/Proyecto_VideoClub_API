@@ -174,6 +174,14 @@ PedidoController.delete = (req, res) => {
         pedido.destroy({ where: { id: id }})
             .then(num => {
               pelicula.update( {alquilada: false},{ where: { id: idPelicula }})
+                .then(pedido =>{
+                  res.send(pedido)
+                })
+                .catch(err => {
+                  res.status(500).send({
+                      message: "Soy bobo y no se porque falla esto " + err
+                  });
+              });
               res.send(num)
               // try {
               //   res.send(num)
