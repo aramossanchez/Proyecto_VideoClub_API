@@ -146,46 +146,29 @@ PedidoController.create = (req, res) => {
 //BORRAMOS UN PEDIDO
 PedidoController.delete =  async (req, res) => {
 
-  let id = req.params.id
+  const id = req.params.id;
 
-  if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
+    if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
-        //ELIMINAMOS PEDIDO
-        pedido.destroy({ where: { id: id }})
-            .then(num => {
-              res.send(num);
-                // if (num == 1) {
-                //         pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
-                //         .then(num => {
-                //           if (num == 1) {
-                //             // res.send({
-                //             //   message: ""
-                //             // });
-                //           } else {
-                //             // res.send({
-                //             //   message: ``
-                //             // });
-                //           }
-                //         })
-                //         .catch(err => {
-                //           res.status(500).send({
-                //             message: "Ha surgido algún error al intentar crear el pedido."
-                //           });
-                //         });
-                //     res.send({
-                //       message: `El pedido con id ${id} ha sido eliminada correctamente.`
-                //   });
-                // } else {
-                //     res.send({
-                //         message: `No se ha podido eliminar el pedido con id ${id}.`
-                //     });
-                // }
+            pedido.destroy({
+                where: { id: id }
             })
-            .catch(err => {
-                res.status(500).send({
-                    message: "Ha surgido algún error al intentar borrar el pedido con el id " + id
+                .then(num => {
+                    if (num == 1) {
+                        res.send({
+                            message: `El pedido con id ${id} ha sido eliminado correctamente.`
+                        });
+                    } else {
+                        res.send({
+                            message: `No se ha podido eliminar el pedido con id ${id}.`
+                        });
+                    }
+                })
+                .catch(err => {
+                    res.status(500).send({
+                        message: "Ha surgido algún error al intentar borrar el pedido con el id " + id
+                    });
                 });
-            });
   }else{
     res.send({
       message: `No tienes permisos para borrar el pedido. Contacta con un administrador.`
