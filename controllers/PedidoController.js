@@ -178,7 +178,7 @@ PedidoController.delete = (req, res) => {
                 res.send(num)
               } catch (error) {
                 res.status(500).send({
-                  message: "No se ha podido modificar la pelicula con id " + id
+                  message: "No se ha podido modificar la pelicula con id " + idPelicula + " " + error
               });
                 
               } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
