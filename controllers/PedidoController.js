@@ -156,8 +156,24 @@ PedidoController.delete = (req, res) => {
         pedido.findByPk(id)
               .then(data => {
                   if (data) {
-                      idPelicula = data.peliculaId
-                      res.send(data);
+                      //ELIMINAMOS PEDIDO
+                      pedido.destroy({ where: { id: id }})
+                      .then(num => {
+                        pelicula.update( {alquilada: false},{ where: { id: data.peliculaId }})
+                        try {
+                          res.send(num)
+                        } catch (error) {
+                          res.status(500).send({
+                            message: "No se ha podido modificar la pelicula con id " + data.peliculaId + " " + error
+                        });
+                          
+                        } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
+                      })
+                      .catch(err => {
+                          res.status(500).send({
+                              message: "Ha surgido algún error al intentar borrar el pedido con el id " + id
+                          });
+                      });
                   } else {
                       res.status(404).send({
                           message: `No se puede encontrar el pedido con el id ${id}.`
