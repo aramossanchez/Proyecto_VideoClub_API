@@ -178,7 +178,7 @@ PedidoController.delete = (req, res) => {
                 res.send(num)
               } catch (error) {
                 res.status(500).send({
-                  message: "su puta madre " + num
+                  message: "no funciona porque patata " + num
               });
                 
               } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
