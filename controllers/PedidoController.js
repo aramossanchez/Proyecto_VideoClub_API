@@ -146,10 +146,12 @@ PedidoController.create = (req, res) => {
 //BORRAMOS UN PEDIDO
 PedidoController.delete =  async (req, res) => {
 
+  let id = req.params.id
+
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
         //ELIMINAMOS PEDIDO
-        pedido.destroy({ where: { id: req.params.id }})
+        pedido.destroy({ where: { id: id }})
             .then(num => {
               res.send(num);
                 // if (num == 1) {
