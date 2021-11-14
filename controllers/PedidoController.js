@@ -144,12 +144,11 @@ PedidoController.create = (req, res) => {
 //-------------------------------------------------------------------------------------
 
 //BORRAMOS UN PEDIDO
-PedidoController.delete =  async (req, res) => {
+PedidoController.delete = (req, res) => {
 
   const id = req.params.id;
 
     if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
-            let res = await pedido.findByPk(req.params.id)
 
             pedido.destroy({
                 where: { id: id }
@@ -157,7 +156,7 @@ PedidoController.delete =  async (req, res) => {
                 .then(num => {
                     if (num == 1) {
                         res.send({
-                            message: `El pedido con id ${id} ha sido eliminado correctamente. ${res}`
+                            message: `El pedido con id ${id} ha sido eliminado correctamente.`
                         });
                     } else {
                         res.send({
