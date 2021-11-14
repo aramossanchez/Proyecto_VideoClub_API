@@ -153,14 +153,14 @@ PedidoController.delete = (req, res) => {
         let idPelicula = 0;
 
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
-        pedido.findByPk(req.params.id)
+        pedido.findByPk(id)
               .then(data => {
                   if (data) {
                       idPelicula = data.peliculaId
                       res.send(data);
                   } else {
                       res.status(404).send({
-                          message: `No se puede encontrar el pedido con el id ${id}. ${data}`
+                          message: `No se puede encontrar el pedido con el id ${id}.`
                       });
                   }
               })
@@ -173,28 +173,36 @@ PedidoController.delete = (req, res) => {
         //ELIMINAMOS PEDIDO
         pedido.destroy({ where: { id: id }})
             .then(num => {
-              pelicula.update( {alquilada: false},{ where: { id: idPelicula }})
-                .then(pedido =>{
-                  res.send(pedido)
-                })
-                .catch(err => {
-                  res.status(500).send({
-                      message: "Soy bobo y no se porque falla esto " + err
+                if (num == 1) {
+                        pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
+                        .then(num => {
+                          if (num == 1) {
+                            // res.send({
+                            //   message: ""
+                            // });
+                          } else {
+                            // res.send({
+                            //   message: ``
+                            // });
+                          }
+                        })
+                        .catch(err => {
+                          res.status(500).send({
+                            message: "Ha surgido algún error al intentar crear el pedido."
+                          });
+                        });
+                    res.send({
+                      message: `El pedido con id ${id} ha sido eliminada correctamente.`
                   });
-              });
-              res.send(num)
-              // try {
-              //   res.send(num)
-              // } catch (error) {
-              //   res.status(500).send({
-              //     message: "no funciona porque patata " + num
-              //   });
-                
-              // } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
+                } else {
+                    res.send({
+                        message: `No se ha podido eliminar el pedido con id ${id}.`
+                    });
+                }
             })
             .catch(err => {
                 res.status(500).send({
-                    message: "Ha surgido algún error al intentar borrar el pedido con el id " + id + err
+                    message: "Ha surgido algún error al intentar borrar el pedido con el id " + id
                 });
             });
   }else{
