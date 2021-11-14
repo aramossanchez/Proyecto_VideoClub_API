@@ -148,55 +148,36 @@ PedidoController.delete =  async (req, res) => {
 
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
-        let idPelicula = 0;
-
-        //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
-        pedido.findOne({where: { id: req.params.id }})
-              .then(data => {
-                  if (data) {
-                      idPelicula = data.peliculaId
-                      res.send(data);
-                  } else {
-                      res.status(404).send({
-                          message: `No encuentra el pedido con el id ${req.params.id}. ¿Porqué? Ni idea, la primera vez si lo hace, pero después falla en encontrar el pedido por id para poder setear el valor de idPelicula.`
-                      });
-                  }
-              })
-              .catch(err => {
-                  res.status(500).send({
-                      message: "Ha surgido algún error al intentar acceder al pedido con el id " + req.params.id
-                  });
-              });
-
         //ELIMINAMOS PEDIDO
         pedido.destroy({ where: { id: req.params.id }})
             .then(num => {
-                if (num == 1) {
-                        pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
-                        .then(num => {
-                          if (num == 1) {
-                            // res.send({
-                            //   message: ""
-                            // });
-                          } else {
-                            // res.send({
-                            //   message: ``
-                            // });
-                          }
-                        })
-                        .catch(err => {
-                          res.status(500).send({
-                            message: "Ha surgido algún error al intentar crear el pedido."
-                          });
-                        });
-                    res.send({
-                      message: `El pedido con id ${id} ha sido eliminada correctamente.`
-                  });
-                } else {
-                    res.send({
-                        message: `No se ha podido eliminar el pedido con id ${id}.`
-                    });
-                }
+              res.send(num);
+                // if (num == 1) {
+                //         pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
+                //         .then(num => {
+                //           if (num == 1) {
+                //             // res.send({
+                //             //   message: ""
+                //             // });
+                //           } else {
+                //             // res.send({
+                //             //   message: ``
+                //             // });
+                //           }
+                //         })
+                //         .catch(err => {
+                //           res.status(500).send({
+                //             message: "Ha surgido algún error al intentar crear el pedido."
+                //           });
+                //         });
+                //     res.send({
+                //       message: `El pedido con id ${id} ha sido eliminada correctamente.`
+                //   });
+                // } else {
+                //     res.send({
+                //         message: `No se ha podido eliminar el pedido con id ${id}.`
+                //     });
+                // }
             })
             .catch(err => {
                 res.status(500).send({
