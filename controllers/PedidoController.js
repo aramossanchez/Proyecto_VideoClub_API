@@ -160,7 +160,7 @@ PedidoController.delete = (req, res) => {
                       res.send(data);
                   } else {
                       res.status(404).send({
-                          message: `No se puede encontrar el pedido con el id ${id}.`
+                          message: `No se puede encontrar el pedido con el id ${id}. ${data}`
                       });
                   }
               })
