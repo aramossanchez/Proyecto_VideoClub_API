@@ -164,7 +164,7 @@ PedidoController.delete = (req, res) => {
                           res.send(num)
                         } catch (error) {
                           res.status(500).send({
-                            message: "Nada machote, que no te va a funcionar " + data.peliculaId + " " + error
+                            message: "Nada machote, que no te va a funcionar " + num + " " + data + " " + error
                         });
                           
                         } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
