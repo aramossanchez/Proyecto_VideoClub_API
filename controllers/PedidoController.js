@@ -153,7 +153,7 @@ PedidoController.delete = (req, res) => {
         let idPelicula = 0;
 
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
-        pedido.findByPk(id)
+        pedido.findByPk(req.params.id)
               .then(data => {
                   if (data) {
                       idPelicula = data.peliculaId
@@ -174,6 +174,7 @@ PedidoController.delete = (req, res) => {
         pedido.destroy({ where: { id: id }})
             .then(num => {
               pelicula.update( {alquilada: false},{ where: { id: idPelicula }})
+              res.send(num)
               // try {
               //   res.send(num)
               // } catch (error) {
