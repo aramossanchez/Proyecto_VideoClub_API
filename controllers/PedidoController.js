@@ -173,34 +173,15 @@ PedidoController.delete = (req, res) => {
         //ELIMINAMOS PEDIDO
         pedido.destroy({ where: { id: id }})
             .then(num => {
-                if (num == 1) {
-                        pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
-                        .then(num => {
-                          console.log(hola)
-                          console.log(idPelicula)
-                          if (num == 1) {
-                            // res.send({
-                            //   message: ""
-                            // });
-                          } else {
-                            // res.send({
-                            //   message: ``
-                            // });
-                          }
-                        })
-                        .catch(err => {
-                          res.status(500).send({
-                            message: "Ha surgido algún error al intentar crear el pedido."
-                          });
-                        });
-                    res.send({
-                      message: `El pedido con id ${id} ha sido eliminado correctamente.`
-                  });
-                } else {
-                    res.send({
-                        message: `No se ha podido eliminar el pedido con id ${id}.`
-                    });
-                }
+              pelicula.update( {alquilada: false},{ where: { id: idPelicula }})
+              try {
+                res.send(num)
+              } catch (error) {
+                res.status(500).send({
+                  message: "No se ha podido modificar la pelicula con id " + id
+              });
+                
+              } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
             })
             .catch(err => {
                 res.status(500).send({
