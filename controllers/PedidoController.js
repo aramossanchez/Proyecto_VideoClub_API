@@ -173,15 +173,16 @@ PedidoController.delete = (req, res) => {
         //ELIMINAMOS PEDIDO
         pedido.destroy({ where: { id: id }})
             .then(num => {
+              res.send(num, idPelicula)
               pelicula.update( {alquilada: false},{ where: { id: idPelicula }})
-              try {
-                res.send(num)
-              } catch (error) {
-                res.status(500).send({
-                  message: "no funciona porque patata " + num
-              });
+              // try {
+              //   res.send(num)
+              // } catch (error) {
+              //   res.status(500).send({
+              //     message: "no funciona porque patata " + num
+              //   });
                 
-              } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
+              // } //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR     
             })
             .catch(err => {
                 res.status(500).send({
