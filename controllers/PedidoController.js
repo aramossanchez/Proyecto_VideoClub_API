@@ -148,6 +148,8 @@ PedidoController.delete = (req, res) => {
 
   const id = req.params.id;
 
+  const idPelicula = req.params.peliculaId;
+
     if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
             pedido.destroy({
@@ -155,6 +157,13 @@ PedidoController.delete = (req, res) => {
             })
                 .then(num => {
                     if (num == 1) {
+                        pelicula.update( {alquilada: false},{ where: { id: idPelicula }})
+                         .then(peli =>{
+                           res.send(peli)
+                         })
+                         .catch(error=>{
+                           res.send(error);
+                         })
                         res.send({
                             message: `El pedido con id ${id} ha sido eliminado correctamente.`
                         });
