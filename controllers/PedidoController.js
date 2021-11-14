@@ -176,6 +176,8 @@ PedidoController.delete = (req, res) => {
                 if (num == 1) {
                         pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
                         .then(num => {
+                          console.log(hola)
+                          console.log(idPelicula)
                           if (num == 1) {
                             // res.send({
                             //   message: ""
