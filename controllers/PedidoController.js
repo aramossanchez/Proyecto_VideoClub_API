@@ -152,10 +152,6 @@ PedidoController.delete =  async (req, res) => {
 
         let idPelicula = 0;
 
-        let res = await pedido.findByPk(req.params.id)
-
-        idPelicula = res.data.peliculaId;
-
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
         pedido.findByPk(id)
               .then(data => {
