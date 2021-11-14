@@ -186,7 +186,7 @@ PedidoController.delete = (req, res) => {
             })
             .catch(err => {
                 res.status(500).send({
-                    message: "Ha surgido algún error al intentar borrar el pedido con el id " + id
+                    message: "Ha surgido algún error al intentar borrar el pedido con el id " + id + err
                 });
             });
   }else{
