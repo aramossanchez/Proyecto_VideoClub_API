@@ -151,14 +151,14 @@ PedidoController.delete =  async (req, res) => {
         let idPelicula = 0;
 
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
-        pedido.findByPk(req.params.id)
+        usuario.findOne({where: { id: req.params.id }})
               .then(data => {
                   if (data) {
                       idPelicula = data.peliculaId
                       res.send(data);
                   } else {
                       res.status(404).send({
-                          message: `No se puede encontrar el pedido con el id ${req.params.id}.`
+                          message: `No encuentra el pedido con el id ${req.params.id}. ¿Porqué? Ni idea, la primera vez si lo hace, pero después falla en encontrar el pedido por id para poder setear el valor de idPelicula.`
                       });
                   }
               })
