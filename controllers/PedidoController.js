@@ -151,7 +151,7 @@ PedidoController.delete =  async (req, res) => {
         let idPelicula = 0;
 
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
-        usuario.findOne({where: { id: req.params.id }})
+        pedido.findOne({where: { id: req.params.id }})
               .then(data => {
                   if (data) {
                       idPelicula = data.peliculaId
