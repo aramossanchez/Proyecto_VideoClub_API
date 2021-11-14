@@ -144,13 +144,17 @@ PedidoController.create = (req, res) => {
 //-------------------------------------------------------------------------------------
 
 //BORRAMOS UN PEDIDO
-PedidoController.delete = (req, res) => {
+PedidoController.delete =  async (req, res) => {
 
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
         const id = req.params.id;
 
         let idPelicula = 0;
+
+        let res = await pedido.findByPk(req.params.id)
+
+        idPelicula = res.data.peliculaId;
 
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
         pedido.findByPk(id)
