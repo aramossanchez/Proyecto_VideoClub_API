@@ -148,30 +148,28 @@ PedidoController.delete =  async (req, res) => {
 
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
 
-        let id = req.params.id;
-
         let idPelicula = 0;
 
         //BUSCAMOS PEDIDO QUE QUEREMOS BORRAR Y SACAMOS LA PELICULA QUE ESTÁ GUARDADA EN EL PEDIDO
-        pedido.findByPk(id)
+        pedido.findByPk(req.params.id)
               .then(data => {
                   if (data) {
                       idPelicula = data.peliculaId
                       res.send(data);
                   } else {
                       res.status(404).send({
-                          message: `No se puede encontrar el pedido con el id ${id}.`
+                          message: `No se puede encontrar el pedido con el id ${req.params.id}.`
                       });
                   }
               })
               .catch(err => {
                   res.status(500).send({
-                      message: "Ha surgido algún error al intentar acceder al pedido con el id " + id
+                      message: "Ha surgido algún error al intentar acceder al pedido con el id " + req.params.id
                   });
               });
 
         //ELIMINAMOS PEDIDO
-        pedido.destroy({ where: { id: id }})
+        pedido.destroy({ where: { id: req.params.id }})
             .then(num => {
                 if (num == 1) {
                         pelicula.update( {alquilada: false},{ where: { id: idPelicula }}) //ACTUALIZAMOS PELICULA PARA QUE SE PUEDA VOLVER A ALQUILAR
