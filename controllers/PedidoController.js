@@ -148,25 +148,8 @@ PedidoController.delete =  async (req, res) => {
 
   const id = req.params.id;
 
-  var peliculaID = 0;
-
     if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA BORRARLO EL ADMINISTRADOR
-            pedido.findByPk(req.params.id)
-            .then(data => {
-              if (data) {
-                peliculaID = data.peliculaId;
-                res.send(data);
-              } else {
-                res.status(404).send({
-                  message: `No se puede encontrar la película con el id ${id}.`
-                });
-              }
-            })
-            .catch(err => {
-              res.status(500).send({
-                message: "Ha surgido algún error al intentar acceder a la Usuario con el id " + id
-              });
-            });
+            let res = await pedido.findByPk(req.params.id)
 
             pedido.destroy({
                 where: { id: id }
@@ -174,7 +157,7 @@ PedidoController.delete =  async (req, res) => {
                 .then(num => {
                     if (num == 1) {
                         res.send({
-                            message: `El pedido con id ${id} ha sido eliminado correctamente. ${peliculaID}`
+                            message: `El pedido con id ${id} ha sido eliminado correctamente. ${res}`
                         });
                     } else {
                         res.send({
