@@ -36,6 +36,8 @@ PedidoController.getAll = (req, res) => {
 //OBTENEMOS UN UNICO PEDIDO, BUSCANDO POR ID
 PedidoController.getById = (req, res) => {
 
+  const idUsuario = req.user.usuario.rol;
+
   const id = req.params.id;
 
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA VERLO EL ADMINISTRADOR O EL USUARIO DUEÑO DEL PERFIL
@@ -58,6 +60,33 @@ PedidoController.getById = (req, res) => {
   }else{
     res.send({
       message: `No tienes permisos para acceder al pedido indicado.`
+    });
+  }
+};
+
+//-------------------------------------------------------------------------------------
+
+//OBTENEMOS PEDIDOS POR ID DE USUARIO
+PedidoController.getByUserId = (req, res) => {
+
+  const id = req.params.id;
+
+  if (req.user.usuario.rol == "administrador" || req.user.usuario.id == id) {// HACEMOS QUE SOLO PUEDA VERLO EL ADMINISTRADOR O EL USUARIO DUEÑO DEL PERFIL
+          
+          //BUSCAMOS PEDIDOS DONDE EL ID DE USUARIO SEA EL QUE PASAMOS POR PARAMETROS EN LA URL
+          pedido.findAll( {where: {idUsuario: id}})
+          .then(data => {
+            res.send(data);
+          })
+          .catch(err => {
+            res.status(500).send({
+              message:
+                err.message || "Ha surgido algún error al intentar acceder a los pedidos."
+            });
+          });
+  }else{
+    res.send({
+      message: `No tienes permisos para acceder al listado de pedidos.`
     });
   }
 };
