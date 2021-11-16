@@ -38,7 +38,7 @@ module.exports = {
       },
       precio: {
         allowNull: false,
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
