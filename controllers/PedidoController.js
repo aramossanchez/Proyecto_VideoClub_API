@@ -74,7 +74,7 @@ PedidoController.getByUserId = (req, res) => {
   if (req.user.usuario.rol == "administrador" || req.user.usuario.id == id) {// HACEMOS QUE SOLO PUEDA VERLO EL ADMINISTRADOR O EL USUARIO DUEÑO DEL PERFIL
           
           //BUSCAMOS PEDIDOS DONDE EL ID DE USUARIO SEA EL QUE PASAMOS POR PARAMETROS EN LA URL
-          pedido.findAll( {where: {idUsuario: id}})
+          pedido.findAll( {where: {usuarioId: id}})
           .then(data => {
             res.send(data);
           })
