@@ -85,7 +85,8 @@ PedidoController.create = (req, res) => {
                           peliculaId: req.body.peliculaId,
                           usuarioId: req.body.usuarioId,
                           fecha_alquiler: req.body.fecha_alquiler,
-                          fecha_devolucion: req.body.fecha_devolucion
+                          fecha_devolucion: req.body.fecha_devolucion,
+                          precio: req.body.precio
                         };
                         pedido.create(nuevoPedido)
                           .then(data => {
