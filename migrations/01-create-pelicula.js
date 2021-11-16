@@ -28,6 +28,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      sinopsis: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       ciudad: {
         type: Sequelize.STRING,
         allowNull: false,

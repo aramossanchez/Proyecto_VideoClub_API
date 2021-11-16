@@ -157,8 +157,11 @@ PeliculaController.create = (req, res) => {
           
           const nuevaPelicula = {
             titulo: req.body.titulo,
+            caratula: req.body.caratula,
+            imagen_promocional: req.body.imagen_promocional,
             genero: req.body.genero,
             actor_principal: req.body.actor_principal,
+            sinopsis: req.body.sinopsis,
             ciudad: req.body.ciudad,
             alquilada: req.body.alquilada
           };
