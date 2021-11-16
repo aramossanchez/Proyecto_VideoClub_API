@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     usuarioId: DataTypes.INTEGER,
     fecha_alquiler: DataTypes.DATE,
     fecha_devolucion: DataTypes.DATE,
-    precio: DataTypes.INTEGER
+    precio: DataTypes.DECIMAL
   }, {
     sequelize,
     modelName: 'pedido',
