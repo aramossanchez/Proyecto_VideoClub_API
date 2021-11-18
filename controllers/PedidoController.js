@@ -36,13 +36,11 @@ PedidoController.getAll = (req, res) => {
 //OBTENEMOS UN UNICO PEDIDO, BUSCANDO POR ID
 PedidoController.getById = (req, res) => {
 
-  const idUsuario = req.user.usuario.rol;
-
   const id = req.params.id;
 
   if (req.user.usuario.rol == "administrador") {// HACEMOS QUE SOLO PUEDA VERLO EL ADMINISTRADOR O EL USUARIO DUEÑO DEL PERFIL
 
-      pedido.findByPk(id)
+      pedido.findOne({where: {id: id} , include: [{ model:peliculaModel}, {model:usuarioModel}]})
           .then(data => {
               if (data) {
                   res.send(data);
